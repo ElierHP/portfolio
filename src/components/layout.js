@@ -50,7 +50,8 @@ Layout.propTypes = {
 
 //Styles
 const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1250px;
+  padding: 0 1rem;
   margin: auto;
 `
 
