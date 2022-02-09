@@ -22,6 +22,10 @@ const Layout = ({ children }) => {
     <Container>
       <Global
         styles={css`
+          body {
+            background-color: ${theme.colors.dark};
+          }
+          ,
           h1,
           h2,
           h3,
@@ -30,6 +34,7 @@ const Layout = ({ children }) => {
           div {
             font-family: ${theme.fonts.body};
             text-decoration: none;
+            color: ${theme.colors.light};
           }
         `}
       />
