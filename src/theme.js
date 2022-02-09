@@ -9,6 +9,7 @@ export default {
     medium: 18,
     large: 24,
     heading: 48,
+    largeHeading: 96,
   },
   fontWeights: {
     thin: 300,
@@ -22,13 +23,12 @@ export default {
   },
   letterSpacing: [0, 1, 2, 3],
   colors: {
-    primary: "#37bc96",
+    primary: "#16A188",
+    primaryLight: "#6CE3CF",
+    primaryDark: "#266257",
     secondary: "#F9F1D7",
     light: "#FFFFFF",
     dark: "#212437",
-    text: "#774644",
-    gray: "#eeeeee",
-    primaryhover: "#c14108",
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {
