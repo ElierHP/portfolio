@@ -24,6 +24,10 @@ const Layout = ({ children }) => {
       {/* Global Styles */}
       <Global
         styles={css`
+          html {
+            font-size: 62.5%;
+          }
+          ,
           body {
             background-color: ${theme.colors.dark};
           }
@@ -34,22 +38,30 @@ const Layout = ({ children }) => {
           p,
           a,
           div {
-            font-family: ${theme.fonts.body};
-            text-decoration: none;
+            font-family: ${theme.fonts.body};  
+            font-size: ${theme.fontSizes.medium}rem;  
+            letter-spacing: ${theme.letterSpacing.body}px;
+            line-height: ${theme.lineHeights.body};
             color: ${theme.colors.light};
+            text-decoration: none;
           }
           ,
           h1,
           h2,
           h3 {
-            letter-spacing: ${theme.letterSpacing[2]}px;
-          }
-          ,
-          a,
-          p,
-          div {
-            font-size: ${theme.fontSizes.medium}px;
-          }
+            font-family: ${theme.fonts.heading};
+            letter-spacing: ${theme.letterSpacing.heading}px;
+            line-height: ${theme.lineHeights.heading};
+          },
+          h1 {
+            font-size: ${theme.fontSizes.largeHeading}rem;
+          },
+          h2 {
+            font-size: ${theme.fonts.heading}rem;
+          },
+          h3 {
+            font-size: ${theme.fonts.large}rem;
+          },
         `}
       />
 
@@ -73,7 +85,7 @@ const Container = styled.div`
 `
 
 const Main = styled.main`
-  min-height: calc(100vh - 122.69px);
+  min-height: calc(100vh - 114.19px);
 `
 
 export default Layout

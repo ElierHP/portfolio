@@ -29,12 +29,12 @@ const Container = styled.div`
 `
 
 const Heading = styled.h1`
-  font-size: ${theme.fontSizes.largeHeading}px;
+  font-size: ${theme.fontSizes.largeHeading}rem;
   margin: 0;
 `
 
 const SubHeading = styled.h2`
-  font-size: ${theme.fontSizes.largeHeading}px;
+  font-size: ${theme.fontSizes.largeHeading}rem;
   margin: 0;
 `
 const Color = styled.span`

@@ -2,14 +2,14 @@ export default {
   space: [0, 1, 2, 3, 4, 6, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Montserrat, sans-serif",
-    heading: "Montserrat, sans-serif",
+    heading: "Roboto, sans-serif",
   },
   fontSizes: {
-    small: 12,
-    medium: 18,
-    large: 24,
-    heading: 48,
-    largeHeading: 96,
+    small: 1.2,
+    medium: 1.8,
+    large: 2.4,
+    heading: 4.8,
+    largeHeading: 9.6,
   },
   fontWeights: {
     thin: 300,
@@ -19,9 +19,12 @@ export default {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1,
   },
-  letterSpacing: [0, 1, 2, 3],
+  letterSpacing: {
+    body: 0.5,
+    heading: 2,
+  },
   colors: {
     primary: "#16A188",
     primaryLight: "#6CE3CF",
