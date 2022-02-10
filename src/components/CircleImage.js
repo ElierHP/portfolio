@@ -91,7 +91,7 @@ const Circle5 = styled.div`
 
 const InnerCircle = styled.div`
   position: absolute;
-  background: rgba(108, 227, 207, 0.7);
+  background: rgba(208, 255, 227, 0.8);
   border-radius: 50%;
   min-height: 300px;
   min-width: 300px;
