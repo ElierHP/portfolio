@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import Button from "./Button"
+import { IoIosArrowDown } from "react-icons/io"
 
 const Hero = () => {
   return (
@@ -18,17 +19,26 @@ const Hero = () => {
         <Button color={theme.colors.primary}>PROJECTS</Button>
         <Button color={theme.colors.primaryDark}>RESUME</Button>
       </BtnContainer>
+
+      {/* Image */}
       <Circle />
+
+      {/* Arrow Icon */}
+      <IconButton>
+        <IoIosArrowDown />
+      </IconButton>
     </Container>
   )
 }
 
 //Styles
 const Container = styled.div`
-  padding-top: 10rem;
+  min-height: calc(100vh - 67.26px);
+  position: relative;
 `
 
 const Heading = styled.h1`
+  padding-top: 10rem;
   font-size: ${theme.fontSizes.largeHeading}rem;
   margin: 0;
 `
@@ -53,14 +63,22 @@ const BtnContainer = styled.div`
   grid-gap: 1rem;
 `
 
+const IconButton = styled.div`
+  position: absolute;
+  bottom: 0;
+  font-size: 5rem;
+  left: 50%;
+  cursor: pointer;
+`
+
 const Circle = styled.div`
   position: absolute;
   background-color: ${theme.colors.primaryLight};
   border-radius: 50%;
   height: 500px;
   width: 500px;
-  top: 10rem;
-  right: 20rem;
+  top: 3rem;
+  right: 0;
   opacity: 0.8;
 `
 export default Hero

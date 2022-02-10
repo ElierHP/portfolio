@@ -7,6 +7,7 @@ import { css, Global } from "@emotion/react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import Footer from "./Footer"
+import SideBar from "./SideBar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -67,6 +68,7 @@ const Layout = ({ children }) => {
 
       {/* Header, Main, Footer */}
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <SideBar />
       <Main>{children}</Main>
       <Footer />
     </Container>
