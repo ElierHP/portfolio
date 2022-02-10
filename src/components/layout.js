@@ -57,10 +57,10 @@ const Layout = ({ children }) => {
             font-size: ${theme.fontSizes.largeHeading}rem;
           },
           h2 {
-            font-size: ${theme.fonts.heading}rem;
+            font-size: ${theme.fontSizes.heading}rem;
           },
           h3 {
-            font-size: ${theme.fonts.large}rem;
+            font-size: ${theme.fontSizes.large}rem;
           },
         `}
       />

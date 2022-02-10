@@ -11,7 +11,7 @@ const Hero = () => {
         <Color>Hi!</Color> I'm Elier
       </Heading>
       <SubHeading>Hernandez</SubHeading>
-      <p>Full-Stack Web Developer</p>
+      <Title>Full-Stack Web Developer</Title>
 
       {/* Buttons */}
       <BtnContainer>
@@ -25,7 +25,7 @@ const Hero = () => {
 
 //Styles
 const Container = styled.div`
-  padding-top: 5rem;
+  padding-top: 10rem;
 `
 
 const Heading = styled.h1`
@@ -35,8 +35,15 @@ const Heading = styled.h1`
 
 const SubHeading = styled.h2`
   font-size: ${theme.fontSizes.largeHeading}rem;
+  letter-spacing: 4px;
   margin: 0;
 `
+
+const Title = styled.p`
+  font-size: ${theme.fontSizes.large}rem;
+  margin: 1rem 0 2rem 0;
+`
+
 const Color = styled.span`
   color: ${theme.colors.primaryLight};
 `
@@ -52,8 +59,8 @@ const Circle = styled.div`
   border-radius: 50%;
   height: 500px;
   width: 500px;
-  top: 7rem;
-  right: 10rem;
+  top: 10rem;
+  right: 20rem;
   opacity: 0.8;
 `
 export default Hero
