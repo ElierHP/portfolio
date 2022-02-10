@@ -10,13 +10,13 @@ const SideBar = () => {
     <>
       <LeftBar>
         <IconWrapper>
-          <IconButton>
+          <IconButton href="https://github.com/ElierHP">
             <AiFillGithub />
           </IconButton>
-          <IconButton>
+          <IconButton href="mailto:elierporto@gmail.com">
             <AiOutlineMail />
           </IconButton>
-          <IconButton>
+          <IconButton href="https://www.linkedin.com/in/elier-hernandez-a16906161/">
             <AiFillLinkedin />
           </IconButton>
         </IconWrapper>
@@ -44,7 +44,7 @@ const IconWrapper = styled.div`
   grid-gap: 1rem;
 `
 
-const IconButton = styled.div`
+const IconButton = styled.a`
   font-size: 2.5rem;
   color: ${theme.colors.neutral};
   cursor: pointer;
@@ -68,14 +68,14 @@ const RightBar = styled.div`
 const SiteUrl = styled.p`
   transform: rotate(90deg);
   position: fixed;
-  top: 43rem;
+  top: 38rem;
   right: -10rem;
   color: ${theme.colors.neutral};
 `
 
 const RightLine = styled.div`
   width: 2px;
-  height: 300px;
+  height: 250px;
   background-color: ${theme.colors.neutral};
   margin-top: 15rem;
 `
