@@ -3,25 +3,27 @@ import styled from "@emotion/styled"
 import theme from "../theme"
 import Button from "./Button"
 import { IoIosArrowDown } from "react-icons/io"
+import CircleImage from "./CircleImage"
 
 const Hero = () => {
   return (
     <Container>
-      {/* Headings */}
-      <Heading>
-        <Color>Hi!</Color> I'm Elier
-      </Heading>
-      <SubHeading>Hernandez</SubHeading>
-      <Title>Full-Stack Web Developer</Title>
+      <div>
+        {/* Headings */}
+        <Heading>
+          <Color>Hi!</Color> I'm Elier
+        </Heading>
+        <SubHeading>Hernandez</SubHeading>
+        <Title>Full-Stack Web Developer</Title>
 
-      {/* Buttons */}
-      <BtnContainer>
-        <Button color={theme.colors.primary}>PROJECTS</Button>
-        <Button color={theme.colors.primaryDark}>RESUME</Button>
-      </BtnContainer>
-
+        {/* Buttons */}
+        <BtnContainer>
+          <Button color={theme.colors.primary}>PROJECTS</Button>
+          <Button color={theme.colors.primaryDark}>RESUME</Button>
+        </BtnContainer>
+      </div>
       {/* Image */}
-      <Circle />
+      <CircleImage />
 
       {/* Arrow Icon */}
       <IconButton>
@@ -35,10 +37,12 @@ const Hero = () => {
 const Container = styled.div`
   min-height: calc(100vh - 67.26px);
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const Heading = styled.h1`
-  padding-top: 10rem;
   font-size: ${theme.fontSizes.largeHeading}rem;
   margin: 0;
 `
@@ -71,14 +75,4 @@ const IconButton = styled.div`
   cursor: pointer;
 `
 
-const Circle = styled.div`
-  position: absolute;
-  background-color: ${theme.colors.primaryLight};
-  border-radius: 50%;
-  height: 500px;
-  width: 500px;
-  top: 3rem;
-  right: 0;
-  opacity: 0.8;
-`
 export default Hero

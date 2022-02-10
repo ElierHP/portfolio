@@ -32,6 +32,7 @@ export default {
     secondary: "#F9F1D7",
     light: "#FFFFFF",
     dark: "#212437",
+    neutral: "#B2B9B9",
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {

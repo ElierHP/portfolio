@@ -24,9 +24,7 @@ const SideBar = () => {
       </LeftBar>
       <RightBar>
         <RightLine />
-        <SiteUrl>
-          <a href="/">https://elier-hernandez.com</a>
-        </SiteUrl>
+        <SiteUrl>https://elier-hernandez.com</SiteUrl>
       </RightBar>
     </>
   )
@@ -48,6 +46,7 @@ const IconWrapper = styled.div`
 
 const IconButton = styled.div`
   font-size: 2.5rem;
+  color: ${theme.colors.neutral};
   cursor: pointer;
 `
 
@@ -55,7 +54,7 @@ const LeftLine = styled.div`
   margin: auto;
   width: 2px;
   height: 200px;
-  background-color: ${theme.colors.light};
+  background-color: ${theme.colors.neutral};
   margin-top: 2rem;
 `
 
@@ -71,12 +70,13 @@ const SiteUrl = styled.p`
   position: fixed;
   top: 43rem;
   right: -10rem;
+  color: ${theme.colors.neutral};
 `
 
 const RightLine = styled.div`
   width: 2px;
   height: 300px;
-  background-color: ${theme.colors.light};
+  background-color: ${theme.colors.neutral};
   margin-top: 15rem;
 `
 
