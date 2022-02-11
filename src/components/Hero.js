@@ -49,6 +49,7 @@ const Heading = styled.h1`
 
 const SubHeading = styled.h2`
   font-size: ${theme.fontSizes.largeHeading}rem;
+  color: ${theme.colors.light};
   letter-spacing: 4px;
   margin: 0;
 `

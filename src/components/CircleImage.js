@@ -24,7 +24,7 @@ function CircleImage() {
 // Styles
 const Container = styled.div`
   position: absolute;
-  top: -17rem;
+  top: -20rem;
   right: -5rem;
   z-index: -20;
 `

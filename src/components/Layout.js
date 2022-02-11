@@ -59,9 +59,11 @@ const Layout = ({ children }) => {
           },
           h2 {
             font-size: ${theme.fontSizes.heading}rem;
+            color: ${theme.colors.primaryLight}
           },
           h3 {
             font-size: ${theme.fontSizes.large}rem;
+            color: ${theme.colors.primaryLight};
           },
         `}
       />

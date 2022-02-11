@@ -1,5 +1,5 @@
 export default {
-  space: [0, 1, 2, 3, 4, 6, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Montserrat, sans-serif",
     heading: "Roboto, sans-serif",
