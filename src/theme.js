@@ -36,6 +36,6 @@ export default {
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {
-    return this.breakpoints.map(bp => `@media (max-width: ${bp}px)`)
+    return this.breakpoints.map(bp => `@media (min-width: ${bp}px)`)
   },
 }

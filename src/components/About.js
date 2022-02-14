@@ -10,6 +10,7 @@ import { RiGatsbyFill } from "react-icons/ri"
 import { SiMaterialui } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
+import SunPalm from "../images/sun-palms2.jpg"
 
 function About() {
   return (
@@ -69,7 +70,7 @@ function About() {
           <Button color={theme.colors.primaryDark}>CONTACT</Button>
         </ButtonContainer>
       </Wrapper>
-      <Image />
+      <Image src={SunPalm} />
     </Container>
   )
 }
@@ -86,13 +87,12 @@ const Wrapper = styled.div`
   max-width: 50ch;
 `
 
-const Image = styled.div`
+const Image = styled.img`
   margin-top: 4rem;
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 525px;
+  height: 525px;
   background: ${theme.colors.light};
-  opacity: 0.5;
 `
 
 const Skills = styled.div`
