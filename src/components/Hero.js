@@ -8,7 +8,7 @@ import CircleImage from "./CircleImage"
 const Hero = () => {
   return (
     <Container>
-      <div>
+      <Wrapper>
         {/* Headings */}
         <Heading>
           <Color>Hi!</Color> I'm Elier
@@ -21,10 +21,9 @@ const Hero = () => {
           <Button color={theme.colors.primary}>PROJECTS</Button>
           <Button color={theme.colors.primaryDark}>RESUME</Button>
         </BtnContainer>
-      </div>
+      </Wrapper>
       {/* Image */}
       <CircleImage />
-
       {/* Arrow Icon */}
       <IconButton>
         <IoIosArrowDown />
@@ -42,21 +41,35 @@ const Container = styled.div`
   align-items: center;
 `
 
+const Wrapper = styled.div`
+  margin: auto;
+  ${theme.mq()[0]} {
+    font-size: ${theme.fontSizes.largeHeading}rem;
+    margin: 0;
+  }
+`
+
 const Heading = styled.h1`
-  font-size: ${theme.fontSizes.largeHeading}rem;
   margin: 0;
+  }
 `
 
 const SubHeading = styled.h2`
-  font-size: ${theme.fontSizes.largeHeading}rem;
+  font-size: ${theme.fontSizes.heading}rem;
   color: ${theme.colors.light};
   letter-spacing: 4px;
   margin: 0;
+  ${theme.mq()[1]} {
+    font-size: ${theme.fontSizes.largeHeading}rem;
+  }
 `
 
 const Title = styled.p`
-  font-size: ${theme.fontSizes.large}rem;
+  font-size: ${theme.fontSizes.medium}rem;
   margin: 1rem 0 2rem 0;
+  ${theme.mq()[1]} {
+    font-size: ${theme.fontSizes.large}rem;
+  }
 `
 
 const Color = styled.span`
@@ -65,7 +78,11 @@ const Color = styled.span`
 
 const BtnContainer = styled.div`
   display: flex;
+  flex-direction: column;
   grid-gap: 1rem;
+  ${theme.mq()[0]} {
+    flex-direction: row;
+  }
 `
 
 const IconButton = styled.div`

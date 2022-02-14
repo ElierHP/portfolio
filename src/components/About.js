@@ -10,7 +10,7 @@ import { RiGatsbyFill } from "react-icons/ri"
 import { SiMaterialui } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
-import SunPalm from "../images/sun-palms2.jpg"
+import Current from "../images/nature3.svg"
 
 function About() {
   return (
@@ -70,7 +70,7 @@ function About() {
           <Button color={theme.colors.primaryDark}>CONTACT</Button>
         </ButtonContainer>
       </Wrapper>
-      <Image src={SunPalm} />
+      <Image src={Current} />
     </Container>
   )
 }
@@ -81,6 +81,11 @@ const Container = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column-reverse;
+  grid-gap: 2rem;
+  ${theme.mq()[2]} {
+    flex-direction: row;
+  }
 `
 
 const Wrapper = styled.div`
@@ -88,15 +93,26 @@ const Wrapper = styled.div`
 `
 
 const Image = styled.img`
-  margin-top: 4rem;
-  border-radius: 50%;
-  width: 525px;
-  height: 525px;
-  background: ${theme.colors.light};
+  margin-bottom: 4rem;
+  width: 250px;
+  height: 250px;
+  ${theme.mq()[1]} {
+    width: 350px;
+    height: 350px;
+    margin-top: 4rem;
+  }
+  ${theme.mq()[2]} {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 0;
+  }
 `
 
 const Skills = styled.div`
-  margin-left: 15rem;
+  margin-left: 0;
+  ${theme.mq()[1]} {
+    margin-left: 15rem;
+  }
 `
 
 const IconContainer = styled.div`
@@ -121,6 +137,10 @@ const ButtonContainer = styled.div`
   padding-top: 2rem;
   display: flex;
   grid-gap: 1rem;
+  flex-direction: column;
+  ${theme.mq()[0]} {
+    flex-direction: row;
+  }
 `
 
 export default About

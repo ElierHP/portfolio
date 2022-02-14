@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import theme from "../theme"
 
 function CircleImage() {
   return (
@@ -24,9 +25,25 @@ function CircleImage() {
 // Styles
 const Container = styled.div`
   position: absolute;
-  top: -20rem;
-  right: -5rem;
+  top: -25rem;
+  right: -45rem;
   z-index: -20;
+  ${theme.mq()[0]} {
+    top: -25rem;
+    right: -30rem;
+  }
+  ${theme.mq()[1]} {
+    top: -25rem;
+    right: -30rem;
+  }
+  ${theme.mq()[2]} {
+    top: -25rem;
+    right: -25rem;
+  }
+  ${theme.mq()[3]} {
+    top: -20rem;
+    right: -5rem;
+  }
 `
 
 const OuterCircle = styled.div`
@@ -91,12 +108,15 @@ const Circle5 = styled.div`
 
 const InnerCircle = styled.div`
   position: absolute;
-  background: rgba(208, 255, 227, 0.8);
+  background: rgba(208, 255, 227, 0.5);
   border-radius: 50%;
   min-height: 300px;
   min-width: 300px;
   top: 50%;
   left: 50%;
   margin: -150px 0px 0px -150px;
+  ${theme.mq()[1]} {
+    background: rgba(208, 255, 227, 0.8);
+  }
 `
 export default CircleImage

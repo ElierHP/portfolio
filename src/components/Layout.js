@@ -21,10 +21,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Container>
-      {/* Global Styles */}
-      <Global
-        styles={css`
+    <Page>
+      <Container>
+        {/* Global Styles */}
+        <Global
+          styles={css`
           html {
             font-size: 62.5%;
           }
@@ -55,25 +56,35 @@ const Layout = ({ children }) => {
             line-height: ${theme.lineHeights.heading};
           },
           h1 {
-            font-size: ${theme.fontSizes.largeHeading}rem;
+            font-size: ${theme.fontSizes.heading}rem;
+            ${theme.mq()[1]} {
+              font-size: ${theme.fontSizes.largeHeading}rem;
+            }
           },
           h2 {
-            font-size: ${theme.fontSizes.heading}rem;
+            font-size: ${theme.fontSizes.large}rem;
             color: ${theme.colors.primaryLight}
+            ${theme.mq()[1]} {
+              font-size: ${theme.fontSizes.heading}rem;
+            }
           },
           h3 {
-            font-size: ${theme.fontSizes.large}rem;
+            font-size: ${theme.fontSizes.medium}rem;
             color: ${theme.colors.primaryLight};
+            ${theme.mq()[1]} {
+              font-size: ${theme.fontSizes.large}rem;
+            }
           },
         `}
-      />
+        />
 
-      {/* Header, Main, Footer */}
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <SideBar />
-      <Main>{children}</Main>
-      <Footer />
-    </Container>
+        {/* Header, Main, Footer */}
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <SideBar />
+        <Main>{children}</Main>
+        <Footer />
+      </Container>
+    </Page>
   )
 }
 
@@ -82,10 +93,17 @@ Layout.propTypes = {
 }
 
 //Styles
+const Page = styled.div`
+  overflow: hidden;
+`
+
 const Container = styled.div`
   max-width: 1250px;
-  padding: 0 1rem;
+  padding: 0 2rem;
   margin: auto;
+  ${theme.mq()[0]} {
+    padding: 0 3rem;
+  }
 `
 
 const Main = styled.main`

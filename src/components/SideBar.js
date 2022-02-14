@@ -36,6 +36,10 @@ const LeftBar = styled.div`
   position: fixed;
   left: 3rem;
   bottom: 0;
+  display: none;
+  ${theme.mq()[3]} {
+    display: block;
+  }
 `
 
 const IconWrapper = styled.div`
@@ -63,6 +67,10 @@ const RightBar = styled.div`
   position: fixed;
   right: 3rem;
   top: -15rem;
+  display: none;
+  ${theme.mq()[3]} {
+    display: block;
+  }
 `
 
 const SiteUrl = styled.p`
