@@ -1,27 +1,28 @@
 import React from "react"
 import theme from "../theme"
 import styled from "@emotion/styled"
+import Button from "./Button"
 
 function Projects() {
   const data = [
     {
       title: "Webmarks",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web.",
+        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
     },
     {
       title: "Webmarks",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web.",
+        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
     },
     {
       title: "Webmarks",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web.",
+        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
     },
@@ -32,10 +33,13 @@ function Projects() {
       <Wrapper>
         {data.map(project => (
           <Card>
-            <Image />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <TechText>technologies: {project.technologies}</TechText>
+            <ButtonContainer>
+              <Button color={`${theme.colors.primary}`}>GITHUB</Button>
+              <Button color={`${theme.colors.primaryDark}`}>VIEW</Button>
+            </ButtonContainer>
           </Card>
         ))}
       </Wrapper>
@@ -44,12 +48,6 @@ function Projects() {
 }
 
 //Styles
-const Image = styled.div`
-  width: 100%;
-  min-height: 200px;
-  background: ${theme.colors.light};
-  opacity: 0.4;
-`
 
 const Container = styled.div`
   padding-top: ${theme.space[8]}rem;
@@ -60,24 +58,43 @@ const Wrapper = styled.div`
   display: flex;
   grid-gap: 3rem;
   flex-direction: column;
-  ${theme.mq()[1]} {
+  ${theme.mq()[3]} {
     flex-direction: row;
   }
 `
 const Title = styled.h2`
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
+  ${theme.mq()[1]} {
+    margin-bottom: 8rem;
+  }
 `
 
 const Card = styled.div`
   border-radius: 0.5rem;
-  background: ${theme.colors.secondaryDark};
-  padding: 4rem 5rem;
+  background: ${theme.colors.card};
+  padding: 2rem 3rem;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  ${theme.mq()[1]} {
+    padding: 4rem 5rem;
+  }
 `
 
 const TechText = styled.p`
   font-size: ${theme.fontSizes.small}rem;
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  ${theme.mq()[0]} {
+    flex-direction: row;
+    margin-top: 4rem;
+    width: 80%;
+  }
 `
 
 export default Projects

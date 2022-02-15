@@ -30,10 +30,10 @@ export default {
     primaryLight: "#6CE3CF",
     primaryDark: "#266257",
     secondary: "#F9F1D7",
-    secondaryDark: "#1C1F33",
     light: "#FFFFFF",
     dark: "#212437",
     neutral: "#B2B9B9",
+    card: "#373B54",
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {

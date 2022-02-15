@@ -26,54 +26,58 @@ const Layout = ({ children }) => {
         {/* Global Styles */}
         <Global
           styles={css`
-          html {
-            font-size: 62.5%;
-          }
-          ,
-          body {
-            background-color: ${theme.colors.dark};
-          }
-          ,
-          h1,
-          h2,
-          h3,
-          p,
-          a,
-          div {
-            font-family: ${theme.fonts.body};  
-            font-size: ${theme.fontSizes.medium}rem;  
-            letter-spacing: ${theme.letterSpacing.body}px;
-            line-height: ${theme.lineHeights.body};
-            color: ${theme.colors.light};
-            text-decoration: none;
-          }
-          ,
-          h1,
-          h2,
-          h3 {
-            font-family: ${theme.fonts.heading};
-            letter-spacing: ${theme.letterSpacing.heading}px;
-            line-height: ${theme.lineHeights.heading};
-          },
-          h1 {
-            font-size: ${theme.fontSizes.heading}rem;
-            ${theme.mq()[1]} {
-              font-size: ${theme.fontSizes.largeHeading}rem;
+            html {
+              font-size: 62.5%;
             }
-          },
-          h2 {
-            font-size: ${theme.fontSizes.large}rem;
-           ${theme.mq()[1]} {
+            ,
+            body {
+              background-color: ${theme.colors.dark};
+            }
+            ,
+            h1,
+            h2,
+            h3,
+            p,
+            a,
+            div {
+              font-family: ${theme.fonts.body};
+              font-size: ${theme.fontSizes.medium}rem;
+              letter-spacing: ${theme.letterSpacing.body}px;
+              line-height: ${theme.lineHeights.body};
+              color: ${theme.colors.light};
+              text-decoration: none;
+            }
+            ,
+            h1,
+            h2,
+            h3 {
+              font-family: ${theme.fonts.heading};
+              letter-spacing: ${theme.letterSpacing.heading}px;
+              line-height: ${theme.lineHeights.heading};
+            }
+            ,
+            h1 {
               font-size: ${theme.fontSizes.heading}rem;
+              ${theme.mq()[1]} {
+                font-size: ${theme.fontSizes.largeHeading}rem;
+              }
             }
-          h3 {
-            font-size: ${theme.fontSizes.medium}rem;
-            color: ${theme.colors.primaryLight};
-            ${theme.mq()[1]} {
+            ,
+            h2 {
               font-size: ${theme.fontSizes.large}rem;
+              color: ${theme.colors.primaryLight};
+              ${theme.mq()[1]} {
+                font-size: ${theme.fontSizes.heading}rem;
+              }
             }
-          },
-        `}
+            ,
+            h3 {
+              font-size: ${theme.fontSizes.medium}rem;
+              ${theme.mq()[1]} {
+                font-size: ${theme.fontSizes.large}rem;
+              }
+            }
+          `}
         />
 
         {/* Header, Main, Footer */}
