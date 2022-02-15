@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Elier Hernandez, full stack web developer portfolio website.",
   "version": "0.1.0",
   "author": "Elier Hernandez",
   "dependencies": {

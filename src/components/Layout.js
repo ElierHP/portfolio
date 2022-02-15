@@ -63,11 +63,9 @@ const Layout = ({ children }) => {
           },
           h2 {
             font-size: ${theme.fontSizes.large}rem;
-            color: ${theme.colors.primaryLight}
-            ${theme.mq()[1]} {
+           ${theme.mq()[1]} {
               font-size: ${theme.fontSizes.heading}rem;
             }
-          },
           h3 {
             font-size: ${theme.fontSizes.medium}rem;
             color: ${theme.colors.primaryLight};
