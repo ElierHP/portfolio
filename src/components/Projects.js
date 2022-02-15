@@ -11,6 +11,8 @@ function Projects() {
         "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
+      siteUrl: "https://webmarks.netlify.com",
+      gitHubUrl: "https://github.com/ElierHP/webmarks",
     },
     {
       title: "Webmarks",
@@ -18,6 +20,8 @@ function Projects() {
         "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
+      siteUrl: "https://webmarks.netlify.com",
+      gitHubUrl: "https://github.com/ElierHP/webmarks",
     },
     {
       title: "Webmarks",
@@ -25,6 +29,8 @@ function Projects() {
         "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built with React and Express.",
       image: "",
       technologies: "react, express, mongodb",
+      siteUrl: "https://webmarks.netlify.com",
+      gitHubUrl: "https://github.com/ElierHP/webmarks",
     },
   ]
   return (
@@ -37,8 +43,18 @@ function Projects() {
             <p>{project.description}</p>
             <TechText>technologies: {project.technologies}</TechText>
             <ButtonContainer>
-              <Button color={`${theme.colors.primary}`}>GITHUB</Button>
-              <Button color={`${theme.colors.primaryDark}`}>VIEW</Button>
+              <Button
+                href={project.gitHubUrl}
+                color={`${theme.colors.primary}`}
+              >
+                GITHUB
+              </Button>
+              <Button
+                href={project.siteUrl}
+                color={`${theme.colors.primaryDark}`}
+              >
+                VIEW
+              </Button>
             </ButtonContainer>
           </Card>
         ))}

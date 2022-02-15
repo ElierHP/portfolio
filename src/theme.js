@@ -8,6 +8,7 @@ export default {
     small: 1.2,
     medium: 1.8,
     large: 2.4,
+    mobileHeading: 3.6,
     heading: 4.8,
     largeHeading: 9.6,
   },

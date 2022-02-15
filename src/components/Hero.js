@@ -82,6 +82,7 @@ const BtnContainer = styled.div`
   grid-gap: 1rem;
   ${theme.mq()[0]} {
     flex-direction: row;
+    max-width: 300px;
   }
 `
 

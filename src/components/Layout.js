@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
             }
             ,
             h2 {
-              font-size: ${theme.fontSizes.large}rem;
+              font-size: ${theme.fontSizes.mobileHeading}rem;
               color: ${theme.colors.primaryLight};
               ${theme.mq()[1]} {
                 font-size: ${theme.fontSizes.heading}rem;
@@ -84,8 +84,8 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <SideBar />
         <Main>{children}</Main>
-        <Footer />
       </Container>
+      <Footer />
     </Page>
   )
 }

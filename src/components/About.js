@@ -93,10 +93,11 @@ const Wrapper = styled.div`
 `
 
 const Image = styled.img`
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   width: 250px;
   height: 250px;
   ${theme.mq()[1]} {
+    margin-bottom: 4rem;
     width: 350px;
     height: 350px;
     margin-top: 4rem;
@@ -140,6 +141,7 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   ${theme.mq()[0]} {
     flex-direction: row;
+    max-width: 300px;
   }
 `
 
