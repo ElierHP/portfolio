@@ -14,7 +14,7 @@ import Current from "../images/nature3.svg"
 
 function About() {
   return (
-    <Container>
+    <Container id="about">
       <Wrapper>
         <h2>About Me</h2>
         <p>

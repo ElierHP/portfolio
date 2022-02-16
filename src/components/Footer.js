@@ -5,9 +5,7 @@ import theme from "../theme"
 const Footer = () => {
   return (
     <MainFooter>
-      All rights reserved © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.com">Gatsby</a>
+      All rights reserved © {new Date().getFullYear()}, Built with Gatsby.
     </MainFooter>
   )
 }
@@ -15,7 +13,7 @@ const Footer = () => {
 //Styles
 const MainFooter = styled.footer`
   margin-top: ${theme.space[3]}rem;
-  background: ${theme.colors.card};
+  background: ${theme.colors.neutral};
   padding: 1.5rem;
   text-align: center;
 `

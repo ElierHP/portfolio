@@ -13,6 +13,7 @@ function Projects() {
       technologies: "react, express, mongodb",
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
+      key: 0,
     },
     {
       title: "Webmarks",
@@ -22,6 +23,7 @@ function Projects() {
       technologies: "react, express, mongodb",
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
+      key: 1,
     },
     {
       title: "Webmarks",
@@ -31,6 +33,7 @@ function Projects() {
       technologies: "react, express, mongodb",
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
+      key: 2,
     },
   ]
   return (
@@ -38,7 +41,7 @@ function Projects() {
       <Title>My Projects</Title>
       <Wrapper>
         {data.map(project => (
-          <Card>
+          <Card key={project.key}>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <TechText>technologies: {project.technologies}</TechText>
@@ -88,9 +91,9 @@ const Title = styled.h2`
 
 const Card = styled.div`
   border-radius: 0.5rem;
-  background: ${theme.colors.card};
+  background: ${theme.colors.neutral};
   padding: 2rem 3rem;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   ${theme.mq()[1]} {
     padding: 4rem 5rem;
   }

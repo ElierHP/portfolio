@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
           styles={css`
             html {
               font-size: 62.5%;
+              scroll-behavior: smooth;
             }
             ,
             body {
@@ -73,7 +74,7 @@ const Layout = ({ children }) => {
             ,
             h2 {
               font-size: ${theme.fontSizes.mobileHeading}rem;
-              color: ${theme.colors.primaryLight};
+              color: ${theme.colors.dark};
               ${theme.mq()[1]} {
                 font-size: ${theme.fontSizes.heading}rem;
               }

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import theme from "../theme"
 
 const Button = ({ color, children, href }) => {
   return (
@@ -13,8 +12,7 @@ const Button = ({ color, children, href }) => {
 //Styles
 const Link = styled.a`
   display: inline-block;
-  padding: 1rem 0;
-  width: 100%;
+  padding: 1rem 4rem;
   text-align: center;
   border-radius: 0.2rem;
   cursor: pointer;

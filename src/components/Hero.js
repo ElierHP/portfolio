@@ -11,11 +11,13 @@ const Hero = () => {
         <Heading>
           <Color>Elier</Color> Hernandez
         </Heading>
-        <SubHeading>I'm a Full-Stack Web Developer</SubHeading>
+        <SubHeading>
+          <OptionalText>I'm a </OptionalText>Full-Stack Web Developer
+        </SubHeading>
       </Wrapper>
 
       {/* Arrow Icon */}
-      <IconButton>
+      <IconButton href="#about">
         <IoIosArrowDown />
       </IconButton>
     </Container>
@@ -44,18 +46,29 @@ const Heading = styled.h1`
 `
 
 const SubHeading = styled.h2`
-  font-size: ${theme.fontSizes.large}rem;
+  font-size: ${theme.fontSizes.medium}rem;
   font-weight: ${theme.fontWeights.thin};
   color: ${theme.colors.light};
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   margin: 0;
+  ${theme.mq()[1]} {
+    font-size: ${theme.fontSizes.large}rem;
+    letter-spacing: 4px;
+  }
+`
+
+const OptionalText = styled.span`
+  display: none;
+  ${theme.mq()[1]} {
+    display: inline;
+  }
 `
 
 const Color = styled.span`
   color: ${theme.colors.primaryLight};
 `
 
-const IconButton = styled.div`
+const IconButton = styled.a`
   position: absolute;
   bottom: 1rem;
   font-size: 4rem;

@@ -1,4 +1,4 @@
-export default {
+const theme = {
   space: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Montserrat, sans-serif",
@@ -33,7 +33,7 @@ export default {
     secondary: "#F9F1D7",
     light: "#FFFFFF",
     dark: "#212437",
-    neutral: "#B2B9B9",
+    neutral: "#D9E7E7",
     card: "#373B54",
   },
   breakpoints: [576, 768, 992, 1200],
@@ -41,3 +41,5 @@ export default {
     return this.breakpoints.map(bp => `@media (min-width: ${bp}px)`)
   },
 }
+
+export default theme

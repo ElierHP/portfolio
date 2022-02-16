@@ -34,6 +34,7 @@ const Logo = styled.div`
 
 const LogoLink = styled(Link)`
   font-size: 2rem;
+  letter-spacing: 3px;
 `
 
 const IconButton = styled.div`

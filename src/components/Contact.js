@@ -32,7 +32,7 @@ const Title = styled.h2`
   margin-top: 0;
 `
 
-const ButtonContainer = styled.a`
+const ButtonContainer = styled.div`
   display: block;
   margin: auto;
   width: 70%;
