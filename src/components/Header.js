@@ -1,30 +1,22 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { HiMenuAlt3 } from "react-icons/hi"
 import styled from "@emotion/styled"
+import theme from "../theme"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   return (
     <NavBar>
       {/* Logo */}
-      <div>
-        <Link to="/">{siteTitle}</Link>
-      </div>
+      <Logo>
+        <LogoLink to="/">E.H.</LogoLink>
+      </Logo>
       {/* Menu Bar */}
       <IconButton>
         <HiMenuAlt3 size={40} />
       </IconButton>
     </NavBar>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 // styles
@@ -35,8 +27,19 @@ const NavBar = styled.header`
   padding: 1rem 0;
 `
 
+const Logo = styled.div`
+  z-index: 1;
+  font-weight: ${theme.fontWeights.bold};
+`
+
+const LogoLink = styled(Link)`
+  font-size: 2rem;
+`
+
 const IconButton = styled.div`
+  color: ${theme.colors.light};
   cursor: pointer;
+  z-index: 1;
 `
 
 export default Header

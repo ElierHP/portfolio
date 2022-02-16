@@ -7,7 +7,7 @@ import { css, Global } from "@emotion/react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import Footer from "./Footer"
-import SideBar from "./SideBar"
+import Video from "../images/video.mp4"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,6 +22,10 @@ const Layout = ({ children }) => {
 
   return (
     <Page>
+      {/* Video */}
+      <DarkContainer>
+        <DesktopVideo autoPlay={true} loop={true} muted={true} src={Video} />
+      </DarkContainer>
       <Container>
         {/* Global Styles */}
         <Global
@@ -31,7 +35,7 @@ const Layout = ({ children }) => {
             }
             ,
             body {
-              background-color: ${theme.colors.dark};
+              background-color: ${theme.colors.light};
             }
             ,
             h1,
@@ -44,6 +48,10 @@ const Layout = ({ children }) => {
               font-size: ${theme.fontSizes.medium}rem;
               letter-spacing: ${theme.letterSpacing.body}px;
               line-height: ${theme.lineHeights.body};
+              color: ${theme.colors.dark};
+              text-decoration: none;
+            }
+            a {
               color: ${theme.colors.light};
               text-decoration: none;
             }
@@ -82,7 +90,6 @@ const Layout = ({ children }) => {
 
         {/* Header, Main, Footer */}
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <SideBar />
         <Main>{children}</Main>
       </Container>
       <Footer />
@@ -106,6 +113,22 @@ const Container = styled.div`
   ${theme.mq()[0]} {
     padding: 0 3rem;
   }
+`
+
+const DarkContainer = styled.div`
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+`
+
+const DesktopVideo = styled.video`
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
 `
 
 const Main = styled.main`
