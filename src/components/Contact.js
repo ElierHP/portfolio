@@ -12,8 +12,13 @@ function Contact() {
         maiores odio quas id ducimus quaerat nobis illo fuga est repellendus
         delectus eos debitis expedita non, qui explicabo ab rerum.
       </p>
-      <ButtonContainer href="mailto:elierporto@gmail.com">
-        <Button color={`${theme.colors.primary}`}>SEND MESSAGE</Button>
+      <ButtonContainer>
+        <Button
+          href="mailto:elierporto@gmail.com"
+          color={`${theme.colors.primary}`}
+        >
+          SEND MESSAGE
+        </Button>
       </ButtonContainer>
     </Container>
   )

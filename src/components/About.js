@@ -10,7 +10,6 @@ import { RiGatsbyFill } from "react-icons/ri"
 import { SiMaterialui } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
-import Current from "../images/nature3.svg"
 
 function About() {
   return (
@@ -45,8 +44,6 @@ function About() {
               <IconTitle>react</IconTitle>
               <FaReact />
             </IconButton>
-          </IconContainer>
-          <IconContainer>
             <IconButton>
               <IconTitle>node</IconTitle>
               <IoLogoNodejs />
@@ -70,7 +67,6 @@ function About() {
           <Button color={theme.colors.primaryDark}>CONTACT</Button>
         </ButtonContainer>
       </Wrapper>
-      <Image src={Current} />
     </Container>
   )
 }
@@ -83,37 +79,18 @@ const Container = styled.section`
   align-items: center;
   flex-direction: column-reverse;
   grid-gap: 2rem;
+  position: relative;
   ${theme.mq()[2]} {
     flex-direction: row;
   }
 `
 
 const Wrapper = styled.div`
-  max-width: 50ch;
-`
-
-const Image = styled.img`
-  margin-bottom: 2rem;
-  width: 250px;
-  height: 250px;
-  ${theme.mq()[1]} {
-    margin-bottom: 4rem;
-    width: 350px;
-    height: 350px;
-    margin-top: 4rem;
-  }
-  ${theme.mq()[2]} {
-    width: 500px;
-    height: 500px;
-    margin-bottom: 0;
-  }
+  width: 90%;
 `
 
 const Skills = styled.div`
-  margin-left: 0;
-  ${theme.mq()[1]} {
-    margin-left: 15rem;
-  }
+  margin-top: 5rem;
 `
 
 const IconContainer = styled.div`
@@ -139,6 +116,7 @@ const ButtonContainer = styled.div`
   display: flex;
   grid-gap: 1rem;
   flex-direction: column;
+  margin-top: 3rem;
   ${theme.mq()[0]} {
     flex-direction: row;
     max-width: 300px;
