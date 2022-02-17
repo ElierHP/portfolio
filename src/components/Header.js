@@ -3,19 +3,22 @@ import { Link } from "gatsby"
 import { HiMenuAlt3 } from "react-icons/hi"
 import styled from "@emotion/styled"
 import theme from "../theme"
+import Container from "./Container"
 
 const Header = () => {
   return (
-    <NavBar>
-      {/* Logo */}
-      <Logo>
-        <LogoLink to="/">E.H.</LogoLink>
-      </Logo>
-      {/* Menu Bar */}
-      <IconButton>
-        <HiMenuAlt3 size={40} />
-      </IconButton>
-    </NavBar>
+    <Container>
+      <NavBar>
+        {/* Logo */}
+        <Logo>
+          <LogoLink to="/">E.H.</LogoLink>
+        </Logo>
+        {/* Menu Bar */}
+        <IconButton>
+          <HiMenuAlt3 size={50} />
+        </IconButton>
+      </NavBar>
+    </Container>
   )
 }
 
@@ -24,7 +27,7 @@ const NavBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
 `
 
 const Logo = styled.div`
@@ -33,7 +36,7 @@ const Logo = styled.div`
 `
 
 const LogoLink = styled(Link)`
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 3px;
 `
 

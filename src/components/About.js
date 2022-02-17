@@ -10,68 +10,72 @@ import { RiGatsbyFill } from "react-icons/ri"
 import { SiMaterialui } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
+import Container from "./Container"
 
 function About() {
   return (
-    <Container id="about">
-      <Wrapper>
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eos,
-          praesentium, alias voluptate magnam assumenda quia ipsum perspiciatis
-          enim atque quod amet laboriosam qui quidem fugit sit nemo vel vero
-          tenetur corrupti quam, numquam fugiat. Aperiam voluptas quidem
-          repellat dolorem perferendis ut facilis et aliquam praesentium sit
-          minima, eum saepe?
-        </p>
-        <Skills>
-          <h3>Skills</h3>
-          {/* Icons */}
-          <IconContainer>
-            <IconButton>
-              <IconTitle>html5</IconTitle>
-              <AiFillHtml5 />
-            </IconButton>
-            <IconButton>
-              <IconTitle>css3</IconTitle>
-              <DiCss3 />
-            </IconButton>
-            <IconButton>
-              <IconTitle>js es6+</IconTitle>
-              <IoLogoJavascript />
-            </IconButton>
-            <IconButton>
-              <IconTitle>react</IconTitle>
-              <FaReact />
-            </IconButton>
-            <IconButton>
-              <IconTitle>node</IconTitle>
-              <IoLogoNodejs />
-            </IconButton>
-            <IconButton>
-              <IconTitle>gatsby</IconTitle>
-              <RiGatsbyFill />
-            </IconButton>
-            <IconButton>
-              <IconTitle>mui</IconTitle>
-              <SiMaterialui />
-            </IconButton>
-            <IconButton>
-              <IconTitle>mongo</IconTitle>
-              <SiMongodb />
-            </IconButton>
-          </IconContainer>
-        </Skills>
-        <ButtonContainer>
-          <Button color={theme.colors.primary}>PROJECTS</Button>
-          <Button color={theme.colors.primaryDark}>CONTACT</Button>
-        </ButtonContainer>
-      </Wrapper>
+    <Container>
+      <Section id="about">
+        <Wrapper>
+          <SubTitle>Who am I?</SubTitle>
+          <Title>About Me</Title>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eos,
+            praesentium, alias voluptate magnam assumenda quia ipsum
+            perspiciatis enim atque quod amet laboriosam qui quidem fugit sit
+            nemo vel vero tenetur corrupti quam, numquam fugiat. Aperiam
+            voluptas quidem repellat dolorem perferendis ut facilis et aliquam
+            praesentium sit minima, eum saepe?
+          </p>
+          <Skills>
+            <h3>Skills</h3>
+            {/* Icons */}
+            <IconContainer>
+              <IconButton>
+                <IconTitle>html5</IconTitle>
+                <AiFillHtml5 />
+              </IconButton>
+              <IconButton>
+                <IconTitle>css3</IconTitle>
+                <DiCss3 />
+              </IconButton>
+              <IconButton>
+                <IconTitle>js es6+</IconTitle>
+                <IoLogoJavascript />
+              </IconButton>
+              <IconButton>
+                <IconTitle>react</IconTitle>
+                <FaReact />
+              </IconButton>
+              <IconButton>
+                <IconTitle>node</IconTitle>
+                <IoLogoNodejs />
+              </IconButton>
+              <IconButton>
+                <IconTitle>gatsby</IconTitle>
+                <RiGatsbyFill />
+              </IconButton>
+              <IconButton>
+                <IconTitle>mui</IconTitle>
+                <SiMaterialui />
+              </IconButton>
+              <IconButton>
+                <IconTitle>mongo</IconTitle>
+                <SiMongodb />
+              </IconButton>
+            </IconContainer>
+          </Skills>
+          <ButtonContainer>
+            <Button color={theme.colors.primary}>PROJECTS</Button>
+            <Button color={theme.colors.primaryDark}>CONTACT</Button>
+          </ButtonContainer>
+        </Wrapper>
+      </Section>
     </Container>
   )
 }
 
-const Container = styled.section`
+const Section = styled.section`
   padding-top: ${theme.space[8]}rem;
   padding-bottom: ${theme.space[8]}rem;
   display: flex;
@@ -87,6 +91,14 @@ const Container = styled.section`
 
 const Wrapper = styled.div`
   width: 90%;
+`
+
+const Title = styled.h2`
+  margin-top: 1.5rem;
+`
+
+const SubTitle = styled.h4`
+  margin-left: 0.5rem;
 `
 
 const Skills = styled.div`

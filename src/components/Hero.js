@@ -70,7 +70,7 @@ const Color = styled.span`
 
 const IconButton = styled.a`
   position: absolute;
-  bottom: 1rem;
+  bottom: 3.5rem;
   font-size: 4rem;
   margin: auto;
   cursor: pointer;

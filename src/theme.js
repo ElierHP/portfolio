@@ -6,7 +6,7 @@ const theme = {
   },
   fontSizes: {
     small: 1.2,
-    medium: 1.8,
+    medium: 1.6,
     large: 2.4,
     mobileHeading: 3.6,
     heading: 4.8,
@@ -33,7 +33,7 @@ const theme = {
     secondary: "#F9F1D7",
     light: "#FFFFFF",
     dark: "#212437",
-    neutral: "#D9E7E7",
+    neutral: "#EDEDED",
     card: "#373B54",
   },
   breakpoints: [576, 768, 992, 1200],

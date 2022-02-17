@@ -6,6 +6,7 @@ import Button from "./Button"
 function Contact() {
   return (
     <Container>
+      <Subtitle>Contact Me</Subtitle>
       <Title>Get in Touch!</Title>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et
@@ -34,8 +35,10 @@ const Container = styled.div`
 `
 
 const Title = styled.h2`
-  margin-top: 0;
+  margin-top: 1.2rem;
 `
+
+const Subtitle = styled.h4``
 
 const ButtonContainer = styled.div`
   display: block;

@@ -26,73 +26,78 @@ const Layout = ({ children }) => {
       <DarkContainer>
         <DesktopVideo autoPlay={true} loop={true} muted={true} src={Video} />
       </DarkContainer>
-      <Container>
-        {/* Global Styles */}
-        <Global
-          styles={css`
-            html {
-              font-size: 62.5%;
-              scroll-behavior: smooth;
+      {/* Global Styles */}
+      <Global
+        styles={css`
+          html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+          }
+          ,
+          body {
+            background-color: ${theme.colors.light};
+          }
+          ,
+          h1,
+          h2,
+          h3,
+          p,
+          a,
+          div {
+            font-family: ${theme.fonts.body};
+            font-size: ${theme.fontSizes.medium}rem;
+            letter-spacing: ${theme.letterSpacing.body}px;
+            line-height: ${theme.lineHeights.body};
+            color: ${theme.colors.dark};
+            text-decoration: none;
+          }
+          a {
+            color: ${theme.colors.light};
+            text-decoration: none;
+          }
+          ,
+          h1,
+          h2,
+          h3,
+          h4 {
+            font-family: ${theme.fonts.heading};
+            letter-spacing: ${theme.letterSpacing.heading}px;
+            line-height: ${theme.lineHeights.heading};
+          }
+          ,
+          h1 {
+            font-size: ${theme.fontSizes.heading}rem;
+            ${theme.mq()[1]} {
+              font-size: ${theme.fontSizes.largeHeading}rem;
             }
-            ,
-            body {
-              background-color: ${theme.colors.light};
-            }
-            ,
-            h1,
-            h2,
-            h3,
-            p,
-            a,
-            div {
-              font-family: ${theme.fonts.body};
-              font-size: ${theme.fontSizes.medium}rem;
-              letter-spacing: ${theme.letterSpacing.body}px;
-              line-height: ${theme.lineHeights.body};
-              color: ${theme.colors.dark};
-              text-decoration: none;
-            }
-            a {
-              color: ${theme.colors.light};
-              text-decoration: none;
-            }
-            ,
-            h1,
-            h2,
-            h3 {
-              font-family: ${theme.fonts.heading};
-              letter-spacing: ${theme.letterSpacing.heading}px;
-              line-height: ${theme.lineHeights.heading};
-            }
-            ,
-            h1 {
+          }
+          ,
+          h2 {
+            font-size: ${theme.fontSizes.mobileHeading}rem;
+            color: ${theme.colors.dark};
+            ${theme.mq()[1]} {
               font-size: ${theme.fontSizes.heading}rem;
-              ${theme.mq()[1]} {
-                font-size: ${theme.fontSizes.largeHeading}rem;
-              }
             }
-            ,
-            h2 {
-              font-size: ${theme.fontSizes.mobileHeading}rem;
-              color: ${theme.colors.dark};
-              ${theme.mq()[1]} {
-                font-size: ${theme.fontSizes.heading}rem;
-              }
+          }
+          ,
+          h3 {
+            font-size: ${theme.fontSizes.medium}rem;
+            ${theme.mq()[1]} {
+              font-size: ${theme.fontSizes.large}rem;
             }
-            ,
-            h3 {
-              font-size: ${theme.fontSizes.medium}rem;
-              ${theme.mq()[1]} {
-                font-size: ${theme.fontSizes.large}rem;
-              }
-            }
-          `}
-        />
+          }
+          ,
+          h4 {
+            font-size: ${theme.fontSizes.small}rem;
+            color: ${theme.colors.primary};
+            margin: 0;
+          }
+        `}
+      />
 
-        {/* Header, Main, Footer */}
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <Main>{children}</Main>
-      </Container>
+      {/* Header, Main, Footer */}
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Main>{children}</Main>
       <Footer />
     </Page>
   )
@@ -105,15 +110,6 @@ Layout.propTypes = {
 //Styles
 const Page = styled.div`
   overflow: hidden;
-`
-
-const Container = styled.div`
-  max-width: 1250px;
-  padding: 0 2rem;
-  margin: auto;
-  ${theme.mq()[0]} {
-    padding: 0 3rem;
-  }
 `
 
 const DarkContainer = styled.div`
