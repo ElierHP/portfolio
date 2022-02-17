@@ -106,21 +106,28 @@ const Skills = styled.div`
 `
 
 const IconContainer = styled.div`
-  display: flex;
-  grid-gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  ${theme.mq()[1]} {
+    grid-gap: 0;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: left;
+  }
 `
 
 const IconTitle = styled.p`
   margin: 0;
   font-size: ${theme.fontSizes.small}rem;
-  text-align: center;
-  margin-bottom: -0.5rem;
 `
 
 const IconButton = styled.div`
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-size: 5rem;
-  text-align: center;
+  color: ${theme.colors.body};
 `
 
 const ButtonContainer = styled.div`

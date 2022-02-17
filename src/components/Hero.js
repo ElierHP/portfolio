@@ -2,10 +2,11 @@ import React from "react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import { IoIosArrowDown } from "react-icons/io"
+import Container from "./Container"
 
 const Hero = () => {
   return (
-    <Container>
+    <Section>
       <Wrapper>
         {/* Headings */}
         <Heading>
@@ -20,13 +21,13 @@ const Hero = () => {
       <IconButton href="#about">
         <IoIosArrowDown />
       </IconButton>
-    </Container>
+    </Section>
   )
 }
 
 //Styles
-const Container = styled.div`
-  min-height: calc(100vh - 67.26px);
+const Section = styled.section`
+  min-height: calc(100vh - 96.86px);
   position: relative;
   display: flex;
   justify-content: center;

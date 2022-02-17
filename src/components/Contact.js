@@ -2,31 +2,34 @@ import React from "react"
 import theme from "../theme"
 import styled from "@emotion/styled"
 import Button from "./Button"
+import Container from "./Container"
 
 function Contact() {
   return (
     <Container>
-      <Subtitle>Contact Me</Subtitle>
-      <Title>Get in Touch!</Title>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et
-        maiores odio quas id ducimus quaerat nobis illo fuga est repellendus
-        delectus eos debitis expedita non, qui explicabo ab rerum.
-      </p>
-      <ButtonContainer>
-        <Button
-          href="mailto:elierporto@gmail.com"
-          color={`${theme.colors.primary}`}
-        >
-          SEND MESSAGE
-        </Button>
-      </ButtonContainer>
+      <Section>
+        <Subtitle>Contact Me</Subtitle>
+        <Title>Get in Touch!</Title>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et
+          maiores odio quas id ducimus quaerat nobis illo fuga est repellendus
+          delectus eos debitis expedita non, qui explicabo ab rerum.
+        </p>
+        <ButtonContainer>
+          <Button
+            href="mailto:elierporto@gmail.com"
+            color={`${theme.colors.primary}`}
+          >
+            SEND MESSAGE
+          </Button>
+        </ButtonContainer>
+      </Section>
     </Container>
   )
 }
 
 //Styles
-const Container = styled.div`
+const Section = styled.section`
   padding-top: ${theme.space[9]}rem;
   padding-bottom: ${theme.space[9]}rem;
   text-align: center;

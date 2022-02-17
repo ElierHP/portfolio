@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
             font-size: ${theme.fontSizes.medium}rem;
             letter-spacing: ${theme.letterSpacing.body}px;
             line-height: ${theme.lineHeights.body};
-            color: ${theme.colors.dark};
+            color: ${theme.colors.body};
             text-decoration: none;
           }
           a {
@@ -63,6 +63,7 @@ const Layout = ({ children }) => {
             font-family: ${theme.fonts.heading};
             letter-spacing: ${theme.letterSpacing.heading}px;
             line-height: ${theme.lineHeights.heading};
+            color: ${theme.colors.dark};
           }
           ,
           h1 {

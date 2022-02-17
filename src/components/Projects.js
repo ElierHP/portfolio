@@ -3,6 +3,7 @@ import theme from "../theme"
 import styled from "@emotion/styled"
 import { AiFillGithub } from "react-icons/ai"
 import { MdTravelExplore } from "react-icons/md"
+import Container from "./Container"
 
 function Projects() {
   const data = [
@@ -38,7 +39,7 @@ function Projects() {
     },
   ]
   return (
-    <Page>
+    <Section>
       <Container>
         <Subtitle>My Work</Subtitle>
         <Title>Projects</Title>
@@ -62,31 +63,30 @@ function Projects() {
           ))}
         </Wrapper>
       </Container>
-    </Page>
+    </Section>
   )
 }
 
 //Styles
 
-const Page = styled.section`
+const Section = styled.section`
   background: ${theme.colors.neutral};
-`
-
-const Container = styled.div`
   padding-top: ${theme.space[8]}rem;
   padding-bottom: ${theme.space[8]}rem;
-  max-width: 1250px;
-  margin: auto;
 `
 
 const Wrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
-  flex-direction: column;
+  ${theme.mq()[1]} {
+    grid-template-columns: 1fr 1fr;
+  }
   ${theme.mq()[3]} {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `
+
 const Title = styled.h2`
   text-align: center;
   margin-bottom: 4rem;
@@ -101,12 +101,13 @@ const Subtitle = styled.h4`
 `
 
 const Card = styled.div`
+  position: relative;
   border-radius: 0.5rem;
   background: ${theme.colors.light};
-  padding: 2rem 3rem;
+  padding: 3rem 3rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   ${theme.mq()[1]} {
-    padding: 2rem 5rem;
+    padding: 5.5rem 5rem;
   }
 `
 
@@ -121,16 +122,21 @@ const CardSubtitle = styled.h4`
 
 const TechText = styled.p`
   font-weight: ${theme.fontWeights.bold};
+  font-size: ${theme.fontSizes.small}rem;
 `
 
 const IconContainer = styled.div`
   display: flex;
   grid-gap: 1rem;
   justify-content: right;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.5rem;
 `
 
 const IconButton = styled.div`
-  font-size: 3rem;
+  font-size: 3.2rem;
+  color: ${theme.colors.primary};
 `
 
 export default Projects
