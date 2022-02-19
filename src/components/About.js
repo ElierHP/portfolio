@@ -76,7 +76,7 @@ function About() {
 }
 
 const Section = styled.section`
-  padding-top: ${theme.space[8]}rem;
+  padding-top: ${theme.space[9]}rem;
   padding-bottom: ${theme.space[8]}rem;
   display: flex;
   justify-content: space-between;

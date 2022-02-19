@@ -1,5 +1,5 @@
 const theme = {
-  space: [0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Montserrat, sans-serif",
     heading: "Roboto, sans-serif",
@@ -33,10 +33,8 @@ const theme = {
     secondary: "#F9F1D7",
     light: "#FFFFFF",
     dark: "#272A3E",
-    neutral: "#EDEDED",
-    neutralDark: "#8B8B8B",
+    neutral: "#DDDDDD",
     body: "#434656",
-    card: "#373B54",
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {
