@@ -39,7 +39,7 @@ function Projects() {
     },
   ]
   return (
-    <Section>
+    <Section id="projects">
       <Container>
         <Subtitle>My Work</Subtitle>
         <Title>Projects</Title>

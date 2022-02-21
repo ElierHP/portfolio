@@ -7,7 +7,7 @@ import Container from "./Container"
 function Contact() {
   return (
     <Container>
-      <Section>
+      <Section id="contact">
         <Subtitle>Contact Me</Subtitle>
         <Title>Get in Touch!</Title>
         <p>
