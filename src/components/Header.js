@@ -4,34 +4,52 @@ import { HiMenuAlt3 } from "react-icons/hi"
 import { CgClose } from "react-icons/cg"
 import styled from "@emotion/styled"
 import theme from "../theme"
-import Container from "./Container"
+import { css } from "@emotion/react"
 
 const Header = () => {
   // Toggle dropdown menu state
   const [toggle, setToggle] = useState(false)
 
+  // State for changing navbar color on scroll
+  const [navColor, setNavColor] = useState(false)
+
+  // Open dropdown menu
   const openMenu = () => {
     setToggle(true)
   }
 
+  // Close dropdown menu
   const closeMenu = () => {
     setToggle(false)
   }
 
+  // Change navbar color when user scrolls down
+  const changeBackground = () => {
+    window.scrollY >= 96.84 ? setNavColor(true) : setNavColor(false)
+  }
+  window.addEventListener("scroll", changeBackground)
+
   return (
     <>
-      <Container>
+      {/* Navbar */}
+      <Container
+        css={css`
+          background-color: ${navColor
+            ? `${theme.colors.dark}`
+            : "transparent"};
+        `}
+      >
         <NavBar>
           {/* Logo */}
           <Logo>
             <LogoLink to="/">E.H.</LogoLink>
           </Logo>
-          {/* Menu Bar */}
+          {/* Menu Icon */}
           <IconButton>
             {toggle ? (
-              <CgClose size={50} onClick={closeMenu} />
+              <CgClose size={45} onClick={closeMenu} />
             ) : (
-              <HiMenuAlt3 size={50} onClick={openMenu} />
+              <HiMenuAlt3 size={45} onClick={openMenu} />
             )}
           </IconButton>
         </NavBar>
@@ -40,9 +58,7 @@ const Header = () => {
       {/* Dropdown Menu */}
       <Menu open={toggle}>
         <MenuItem onClick={closeMenu}>
-          <MenuLink href="#home" animate>
-            HOME
-          </MenuLink>
+          <MenuLink href="#home">HOME</MenuLink>
         </MenuItem>
         <MenuItem onClick={closeMenu}>
           <MenuLink href="#about">ABOUT</MenuLink>
@@ -59,15 +75,24 @@ const Header = () => {
 }
 
 // styles
-const NavBar = styled.header`
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+`
+
+const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 2rem;
+  max-width: 1250px;
+  margin: auto;
 `
 
 const Logo = styled.div`
-  z-index: 1;
   font-weight: ${theme.fontWeights.bold};
 `
 
@@ -77,14 +102,14 @@ const LogoLink = styled(Link)`
 `
 
 const IconButton = styled.div`
+  display: flex;
   color: ${theme.colors.light};
   cursor: pointer;
-  z-index: 2;
 `
 
-// Navbar dropdown menu
+// Dropdown Menu
 const Menu = styled.ul`
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
   height: 100vh;
@@ -100,6 +125,7 @@ const Menu = styled.ul`
   align-items: center;
   justify-content: center;
   transform: ${props => (props.open ? "translateY(0)" : "translateY(-100vh)")};
+  opacity: ${props => (props.open ? "1" : "0")};
   transition: all 0.5s ease-in-out;
 `
 

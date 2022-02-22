@@ -5,7 +5,7 @@ import { IoIosArrowDown } from "react-icons/io"
 
 const Hero = () => {
   return (
-    <Section>
+    <Section id="home">
       <Wrapper>
         {/* Headings */}
         <Heading>
@@ -26,7 +26,7 @@ const Hero = () => {
 
 //Styles
 const Section = styled.section`
-  min-height: calc(100vh - 96.86px);
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@ const Color = styled.span`
 
 const IconButton = styled.a`
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 3rem;
   font-size: 4rem;
   margin: auto;
   cursor: pointer;
