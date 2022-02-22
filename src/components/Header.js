@@ -7,16 +7,15 @@ import theme from "../theme"
 import Container from "./Container"
 
 const Header = () => {
+  // Toggle dropdown menu state
   const [toggle, setToggle] = useState(false)
 
   const openMenu = () => {
     setToggle(true)
-    document.body.style.overflow = "hidden"
   }
 
   const closeMenu = () => {
     setToggle(false)
-    document.body.style.overflow = "auto"
   }
 
   return (
@@ -37,22 +36,24 @@ const Header = () => {
           </IconButton>
         </NavBar>
       </Container>
-      {toggle && (
-        <Menu>
-          <MenuItem onClick={closeMenu}>
-            <MenuLink to="#home">HOME</MenuLink>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <MenuLink href="#about">ABOUT</MenuLink>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <MenuLink href="#projects">PROJECTS</MenuLink>
-          </MenuItem>
-          <MenuItem onClick={closeMenu}>
-            <MenuLink href="#contact">CONTACT</MenuLink>
-          </MenuItem>
-        </Menu>
-      )}
+
+      {/* Dropdown Menu */}
+      <Menu open={toggle}>
+        <MenuItem onClick={closeMenu}>
+          <MenuLink href="#home" animate>
+            HOME
+          </MenuLink>
+        </MenuItem>
+        <MenuItem onClick={closeMenu}>
+          <MenuLink href="#about">ABOUT</MenuLink>
+        </MenuItem>
+        <MenuItem onClick={closeMenu}>
+          <MenuLink href="#projects">PROJECTS</MenuLink>
+        </MenuItem>
+        <MenuItem onClick={closeMenu}>
+          <MenuLink href="#contact">CONTACT</MenuLink>
+        </MenuItem>
+      </Menu>
     </>
   )
 }
@@ -89,8 +90,8 @@ const Menu = styled.ul`
   height: 100vh;
   width: 100%;
   margin: 0;
+  padding: 0;
   background-color: ${theme.colors.dark};
-  color: ${theme.colors.light};
   text-align: center;
   text-decoration: none;
   list-style: none;
@@ -98,10 +99,12 @@ const Menu = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: ${props => (props.open ? "translateY(0)" : "translateY(-100vh)")};
+  transition: all 0.5s ease-in-out;
 `
 
 const MenuItem = styled.li`
-  padding: 4rem;
+  padding: 4rem 0;
 `
 
 const MenuLink = styled.a`
@@ -109,4 +112,5 @@ const MenuLink = styled.a`
   font-weight: ${theme.fontWeights.body};
   letter-spacing: 5px;
 `
+
 export default Header
