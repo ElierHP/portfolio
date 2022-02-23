@@ -5,6 +5,9 @@ import { CgClose } from "react-icons/cg"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import { css } from "@emotion/react"
+import { AiFillGithub } from "react-icons/ai"
+import { AiFillLinkedin } from "react-icons/ai"
+import { AiOutlineMail } from "react-icons/ai"
 
 const Header = () => {
   // Toggle dropdown menu state
@@ -16,6 +19,7 @@ const Header = () => {
   // Open dropdown menu
   const openMenu = () => {
     setToggle(true)
+    setNavColor(false)
   }
 
   // Close dropdown menu
@@ -25,7 +29,11 @@ const Header = () => {
 
   // Change navbar color when user scrolls down
   const changeBackground = () => {
-    window.scrollY >= 96.84 ? setNavColor(true) : setNavColor(false)
+    if (toggle) {
+      setNavColor(false)
+    } else {
+      window.scrollY >= 96.84 ? setNavColor(true) : setNavColor(false)
+    }
   }
   window.addEventListener("scroll", changeBackground)
 
@@ -35,7 +43,7 @@ const Header = () => {
       <Container
         css={css`
           background-color: ${navColor
-            ? `${theme.colors.dark}`
+            ? `${theme.colors.primary}`
             : "transparent"};
         `}
       >
@@ -57,18 +65,30 @@ const Header = () => {
 
       {/* Dropdown Menu */}
       <Menu open={toggle}>
-        <MenuItem onClick={closeMenu}>
+        <li onClick={closeMenu}>
           <MenuLink href="#home">HOME</MenuLink>
-        </MenuItem>
-        <MenuItem onClick={closeMenu}>
+        </li>
+        <li onClick={closeMenu}>
           <MenuLink href="#about">ABOUT</MenuLink>
-        </MenuItem>
-        <MenuItem onClick={closeMenu}>
+        </li>
+        <li onClick={closeMenu}>
           <MenuLink href="#projects">PROJECTS</MenuLink>
-        </MenuItem>
-        <MenuItem onClick={closeMenu}>
+        </li>
+        <li onClick={closeMenu}>
           <MenuLink href="#contact">CONTACT</MenuLink>
-        </MenuItem>
+        </li>
+        {/* Icons */}
+        <IconContainer>
+          <SocialIcon href="https://github.com/ElierHP">
+            <AiFillGithub size={45} />
+          </SocialIcon>
+          <SocialIcon href="https://www.linkedin.com/in/elier-hernandez-a16906161/">
+            <AiFillLinkedin size={45} />
+          </SocialIcon>
+          <SocialIcon href="mailto:elierporto@gmail.com">
+            <AiOutlineMail size={45} />
+          </SocialIcon>
+        </IconContainer>
       </Menu>
     </>
   )
@@ -116,27 +136,36 @@ const Menu = styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: ${theme.colors.dark};
+  background-color: ${theme.colors.primaryDark};
   text-align: center;
   text-decoration: none;
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
   justify-content: center;
+
   transform: ${props => (props.open ? "translateY(0)" : "translateY(-100vh)")};
   opacity: ${props => (props.open ? "1" : "0")};
   transition: all 0.5s ease-in-out;
-`
-
-const MenuItem = styled.li`
-  padding: 4rem 0;
 `
 
 const MenuLink = styled.a`
   font-size: ${theme.fontSizes.heading}rem;
   font-weight: ${theme.fontWeights.body};
   letter-spacing: 5px;
+`
+
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 3rem;
+`
+
+const SocialIcon = styled.a`
+  display: flex;
+  color: ${theme.colors.light};
+  cursor: pointer;
 `
 
 export default Header
