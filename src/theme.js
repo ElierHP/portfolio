@@ -34,7 +34,7 @@ const theme = {
     light: "#FFFFFF",
     dark: "#272A3E",
     neutral: "#DDDDDD",
-    body: "#434656",
+    body: "#404250",
   },
   breakpoints: [576, 768, 992, 1200],
   mq() {

@@ -94,7 +94,7 @@ const Header = () => {
   )
 }
 
-// styles
+// Styles
 const Container = styled.div`
   position: fixed;
   top: 0;
@@ -153,6 +153,13 @@ const MenuLink = styled.a`
   font-size: ${theme.fontSizes.heading}rem;
   font-weight: ${theme.fontWeights.body};
   letter-spacing: 5px;
+  border-bottom: 5px solid ${theme.colors.primaryDark};
+  padding: 0 1rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${theme.colors.primaryLight};
+    border-bottom: 5px solid ${theme.colors.primaryLight};
+  }
 `
 
 const IconContainer = styled.div`
