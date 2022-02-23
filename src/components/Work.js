@@ -2,13 +2,18 @@ import React from "react"
 import Container from "./Container"
 import styled from "@emotion/styled"
 import theme from "../theme"
+import Title from "./Title"
 
 function Work() {
   return (
     <Container>
       <Section>
-        <Subtitle>Development</Subtitle>
-        <Title>What I do</Title>
+        <Title
+          heading="What I do"
+          subheading="Development"
+          align="center"
+          marginTop="1.2"
+        />
         <Wrapper>
           <Card>
             <h3>Font End Development</h3>
@@ -47,9 +52,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   grid-gap: 3rem;
+  margin-top: 4rem;
   flex-direction: column;
   ${theme.mq()[1]} {
     flex-direction: row;
+    margin-top: 8rem;
   }
 `
 
@@ -57,19 +64,6 @@ const Card = styled.div`
   padding: 4rem;
   border: 3px solid ${theme.colors.neutral};
   border-radius: 0.2rem;
-`
-
-const Title = styled.h2`
-  margin-top: 1.5rem;
-  text-align: center;
-  margin-bottom: 4rem;
-  ${theme.mq()[2]} {
-    margin-bottom: 7rem;
-  }
-`
-
-const Subtitle = styled.h4`
-  text-align: center;
 `
 
 export default Work

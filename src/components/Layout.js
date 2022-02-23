@@ -67,14 +67,14 @@ const Layout = ({ children }) => {
           }
           ,
           h1 {
-            font-size: ${theme.fontSizes.heading}rem;
+            font-size: ${theme.fontSizes.mobileHeading}rem;
             ${theme.mq()[1]} {
               font-size: ${theme.fontSizes.largeHeading}rem;
             }
           }
           ,
           h2 {
-            font-size: ${theme.fontSizes.mobileHeading}rem;
+            font-size: ${theme.fontSizes.large}rem;
             color: ${theme.colors.dark};
             ${theme.mq()[1]} {
               font-size: ${theme.fontSizes.heading}rem;

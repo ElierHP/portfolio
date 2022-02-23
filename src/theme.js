@@ -8,9 +8,9 @@ const theme = {
     small: 1.4,
     medium: 1.6,
     large: 2.4,
-    mobileHeading: 3.6,
+    mobileHeading: 3,
     heading: 4.8,
-    largeHeading: 6.4,
+    largeHeading: 6,
   },
   fontWeights: {
     thin: 300,

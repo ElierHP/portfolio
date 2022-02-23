@@ -11,14 +11,14 @@ import { SiMaterialui } from "react-icons/si"
 import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
 import Container from "./Container"
+import Title from "./Title"
 
 function About() {
   return (
     <Container>
       <Section id="about">
         <Wrapper>
-          <SubTitle>Who am I?</SubTitle>
-          <Title>About Me</Title>
+          <Title heading="About Me" subheading="Who am I?" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eos,
             praesentium, alias voluptate magnam assumenda quia ipsum
@@ -91,14 +91,6 @@ const Section = styled.section`
 
 const Wrapper = styled.div`
   width: 90%;
-`
-
-const Title = styled.h2`
-  margin-top: 1.5rem;
-`
-
-const SubTitle = styled.h4`
-  margin-left: 0.5rem;
 `
 
 const Skills = styled.div`

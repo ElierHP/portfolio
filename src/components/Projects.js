@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import { AiFillGithub } from "react-icons/ai"
 import { MdTravelExplore } from "react-icons/md"
 import Container from "./Container"
+import Title from "./Title"
 
 function Projects() {
   const data = [
@@ -41,8 +42,12 @@ function Projects() {
   return (
     <Section id="projects">
       <Container>
-        <Subtitle>My Work</Subtitle>
-        <Title>Projects</Title>
+        <Title
+          heading="Projects"
+          subheading="My Work"
+          align="center"
+          marginTop="1.2"
+        />
         <Wrapper>
           {data.map(project => (
             <Card key={project.key}>
@@ -79,25 +84,14 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
+  margin-top: 4rem;
   ${theme.mq()[1]} {
     grid-template-columns: 1fr 1fr;
+    margin-top: 8rem;
   }
   ${theme.mq()[3]} {
     grid-template-columns: 1fr 1fr 1fr;
   }
-`
-
-const Title = styled.h2`
-  text-align: center;
-  margin-bottom: 4rem;
-  margin-top: 1.2rem;
-  ${theme.mq()[1]} {
-    margin-bottom: 8rem;
-  }
-`
-
-const Subtitle = styled.h4`
-  text-align: center;
 `
 
 const Card = styled.div`

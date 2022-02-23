@@ -11,9 +11,7 @@ const Hero = () => {
         <Heading>
           <Color>Elier</Color> Hernandez
         </Heading>
-        <SubHeading>
-          <OptionalText>I'm a </OptionalText>Full-Stack Web Developer
-        </SubHeading>
+        <SubHeading>Full-Stack Web Developer</SubHeading>
       </Wrapper>
 
       {/* Arrow Icon */}
@@ -42,7 +40,10 @@ const Wrapper = styled.div`
 const Heading = styled.h1`
   margin: 0;
   color: ${theme.colors.light};
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  ${theme.mq()[1]} {
+    margin-bottom: 2rem;
+  }
 `
 
 const SubHeading = styled.h2`
@@ -54,13 +55,6 @@ const SubHeading = styled.h2`
   ${theme.mq()[1]} {
     font-size: ${theme.fontSizes.large}rem;
     letter-spacing: 4px;
-  }
-`
-
-const OptionalText = styled.span`
-  display: none;
-  ${theme.mq()[1]} {
-    display: inline;
   }
 `
 

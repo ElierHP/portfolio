@@ -3,13 +3,18 @@ import theme from "../theme"
 import styled from "@emotion/styled"
 import Button from "./Button"
 import Container from "./Container"
+import Title from "./Title"
 
 function Contact() {
   return (
     <Container>
       <Section id="contact">
-        <Subtitle>Contact Me</Subtitle>
-        <Title>Get in Touch!</Title>
+        <Title
+          heading="Get in Touch!"
+          subheading="Contact Me"
+          align="center"
+          marginTop="1.2"
+        />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et
           maiores odio quas id ducimus quaerat nobis illo fuga est repellendus
@@ -36,12 +41,6 @@ const Section = styled.section`
   margin: auto;
   max-width: 700px;
 `
-
-const Title = styled.h2`
-  margin-top: 1.2rem;
-`
-
-const Subtitle = styled.h4``
 
 const ButtonContainer = styled.div`
   display: block;
