@@ -16,9 +16,9 @@ function Contact() {
           marginTop="1.2"
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus et
-          maiores odio quas id ducimus quaerat nobis illo fuga est repellendus
-          delectus eos debitis expedita non, qui explicabo ab rerum.
+          If you're interested in working with me, feel free to click the button
+          below and send me an message! You can also just email me at
+          ElierPorto@gmail.com; I look forward to our conversation.
         </p>
         <ButtonContainer>
           <Button

@@ -11,31 +11,37 @@ function Projects() {
     {
       title: "Webmarks",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built.",
+        "Webmarks is an online file system that allows users to store folders and urls on the web. The Front end for this application was built using React and Material UI.",
+      description2:
+        "I built the Back End API using Node with Express and handled the user authentication with Passport. The project is currently live on the web and can be viewed below.",
       image: "",
-      technologies: "React, Express, Mongodb",
+      technologies: "React, MUI, Express, Mongodb",
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
       key: 0,
     },
     {
-      title: "Webmarks",
+      title: "Sunshine Dental",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built.",
+        "Sunshine dental is a dentistry located in Valencia Shores Blvd. They do teeth cleanings, fillings & crowns, root canals, invisilign and more. This was one of my first projects.",
+      description2:
+        "I made this website using React and Gatsby with Styled Components for the CSS. I used Formik to create the contact form and it is hosted with Netlify.",
       image: "",
-      technologies: "React, Express, Mongodb",
-      siteUrl: "https://webmarks.netlify.com",
-      gitHubUrl: "https://github.com/ElierHP/webmarks",
+      technologies: "React, Gatsby, Formik, Netlify",
+      siteUrl: "https://sunshinedental.netlify.app/",
+      gitHubUrl: "https://github.com/ElierHP/sunshinedental",
       key: 1,
     },
     {
-      title: "Webmarks",
+      title: "My Portfolio Site",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web. This is an application built.",
+        "My portfolio was built to showcase projects and information that you might want to know about me. It includes a download link to my CV, as well as a contact link connected to my email.",
+      description2:
+        "This website was built with React and Gatsby, using Emotion JS for handling the CSS. The codebase can be viewed by clicking on the Github icon below.",
       image: "",
-      technologies: "React, Express, Mongodb",
-      siteUrl: "https://webmarks.netlify.com",
-      gitHubUrl: "https://github.com/ElierHP/webmarks",
+      technologies: "React, Gatsby, Emotion Js",
+      siteUrl: "https://elierhernandez.netlify.com/",
+      gitHubUrl: "https://github.com/ElierHP/portfolio",
       key: 2,
     },
   ]
@@ -54,13 +60,13 @@ function Projects() {
               <CardSubtitle>Featured Project</CardSubtitle>
               <CardTitle>{project.title}</CardTitle>
               <p>{project.description}</p>
-              <p>{project.description}</p>
+              <p>{project.description2}</p>
               <TechText>{project.technologies}</TechText>
               <IconContainer>
-                <IconButton>
+                <IconButton href={project.gitHubUrl}>
                   <AiFillGithub />
                 </IconButton>
-                <IconButton>
+                <IconButton href={project.siteUrl}>
                   <MdTravelExplore />
                 </IconButton>
               </IconContainer>
@@ -128,9 +134,10 @@ const IconContainer = styled.div`
   bottom: 0.5rem;
 `
 
-const IconButton = styled.div`
+const IconButton = styled.a`
   font-size: 3.2rem;
   color: ${theme.colors.primary};
+  cursor: pointer;
 `
 
 export default Projects

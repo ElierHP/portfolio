@@ -18,17 +18,17 @@ function Work() {
           <Card>
             <h3>Font End Development</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed id
-              aperiam perspiciatis accusamus sint impedit nulla eius numquam
-              natus hic.
+              I build front end interfaces for the web using HTML, CSS,
+              Javascript and React. I also use a variety of libraries and tools
+              depending on the problem I'm trying to solve.
             </p>
           </Card>
           <Card>
             <h3>Back End Development</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed id
-              aperiam perspiciatis accusamus sint impedit nulla eius numquam
-              natus hic.
+              I have experience building backend APIs with user authentication
+              and authorization. I've created my own API for multiple projects
+              of mine using tools such as Node and Express.
             </p>
           </Card>
         </Wrapper>
@@ -49,13 +49,12 @@ const Section = styled.section`
 `
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
   grid-gap: 3rem;
   margin-top: 4rem;
-  flex-direction: column;
   ${theme.mq()[1]} {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     margin-top: 8rem;
   }
 `

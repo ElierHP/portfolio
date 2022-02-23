@@ -20,12 +20,16 @@ function About() {
         <Wrapper>
           <Title heading="About Me" subheading="Who am I?" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eos,
-            praesentium, alias voluptate magnam assumenda quia ipsum
-            perspiciatis enim atque quod amet laboriosam qui quidem fugit sit
-            nemo vel vero tenetur corrupti quam, numquam fugiat. Aperiam
-            voluptas quidem repellat dolorem perferendis ut facilis et aliquam
-            praesentium sit minima, eum saepe?
+            Hello! My name is Elier and I enjoy creating things that live on the
+            internet. My interest in the web started back in 2019 as a designer,
+            creating user interfaces and experiences for the web. I learned Web
+            Development in order to bring my designs to life, and fell in love
+            with it.
+          </p>
+          <p>
+            Fast-forward to today, and I've had the privilege of working at an
+            advertising agency, a video game studio, and the opportunity of
+            giving multiple business a presence on the web.
           </p>
           <Skills>
             <h3>Skills</h3>
