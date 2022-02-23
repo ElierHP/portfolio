@@ -8,7 +8,7 @@ import Seo from "../components/Seo"
 import Work from "../components/Work"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout home={true}>
     <Seo title="Home" />
     <Hero />
     <About />

@@ -70,8 +70,12 @@ function About() {
             </IconContainer>
           </Skills>
           <ButtonContainer>
-            <Button color={theme.colors.primary}>PROJECTS</Button>
-            <Button color={theme.colors.primaryDark}>CONTACT</Button>
+            <Button color={theme.colors.primary} href="#projects">
+              PROJECTS
+            </Button>
+            <Button color={theme.colors.primaryDark} href="#contact">
+              CONTACT
+            </Button>
           </ButtonContainer>
         </Wrapper>
       </Section>
