@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import { AiFillHtml5 } from "react-icons/ai"
@@ -12,64 +12,109 @@ import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
+import "aos/dist/aos.css"
 
 function About() {
   return (
     <Container>
       <Section id="about">
         <Wrapper>
-          <Title heading="About Me" subheading="Who am I?" />
-          <p>
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <Title heading="About Me" subheading="Who am I?" />
+          </div>
+          <p data-aos="fade-down" data-aos-duration="1000">
             Hello! My name is Elier and I enjoy creating things that live on the
             internet. My interest in the web started back in 2019 as a designer,
             creating user interfaces and experiences for the web. I learned Web
             Development in order to bring my designs to life, and fell in love
             with it.
           </p>
-          <p>
+          <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
             Fast-forward to today, and I've had the privilege of working at an
             advertising agency, a video game studio, and the opportunity of
             giving multiple business a presence on the web.
           </p>
           <Skills>
-            <h3>Skills</h3>
+            <h3
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              Skills
+            </h3>
             {/* Icons */}
             <IconContainer>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
                 <IconTitle>html5</IconTitle>
                 <AiFillHtml5 />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="250"
+              >
                 <IconTitle>css3</IconTitle>
                 <DiCss3 />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
                 <IconTitle>js es6+</IconTitle>
                 <IoLogoJavascript />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="350"
+              >
                 <IconTitle>react</IconTitle>
                 <FaReact />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+              >
                 <IconTitle>node</IconTitle>
                 <IoLogoNodejs />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="450"
+              >
                 <IconTitle>gatsby</IconTitle>
                 <RiGatsbyFill />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+              >
                 <IconTitle>mui</IconTitle>
                 <SiMaterialui />
               </IconButton>
-              <IconButton>
+              <IconButton
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="550"
+              >
                 <IconTitle>mongo</IconTitle>
                 <SiMongodb />
               </IconButton>
             </IconContainer>
           </Skills>
-          <ButtonContainer>
+          <ButtonContainer
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="250"
+          >
             <Button color={theme.colors.primary} href="#projects">
               PROJECTS
             </Button>

@@ -2,20 +2,33 @@ import React from "react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import { IoIosArrowDown } from "react-icons/io"
+import "aos/dist/aos.css"
 
 const Hero = () => {
   return (
     <Section id="home">
       <Wrapper>
         {/* Headings */}
-        <Heading>
+        <Heading data-aos="fade-down" data-aos-duration="1000">
           <Color>Elier</Color> Hernandez
         </Heading>
-        <SubHeading>Full-Stack Web Developer</SubHeading>
+        <SubHeading
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
+          Full-Stack Web Developer
+        </SubHeading>
       </Wrapper>
 
       {/* Arrow Icon */}
-      <IconButton href="#about">
+      <IconButton
+        href="#about"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-offset="0"
+      >
         <IoIosArrowDown />
       </IconButton>
     </Section>

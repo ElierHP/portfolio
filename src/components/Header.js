@@ -8,6 +8,7 @@ import { css } from "@emotion/react"
 import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
+import "aos/dist/aos.css"
 
 const Header = () => {
   // Toggle dropdown menu state
@@ -50,11 +51,11 @@ const Header = () => {
       >
         <NavBar>
           {/* Logo */}
-          <Logo>
+          <Logo data-aos="fade-right" data-aos-duration="1000">
             <LogoLink to="/">E.H.</LogoLink>
           </Logo>
           {/* Menu Icon */}
-          <IconButton>
+          <IconButton data-aos="fade-left" data-aos-duration="1000">
             {toggle ? (
               <CgClose size={45} onClick={closeMenu} />
             ) : (

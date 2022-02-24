@@ -3,19 +3,26 @@ import Container from "./Container"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import Title from "./Title"
+import "aos/dist/aos.css"
 
 function Work() {
   return (
     <Container>
       <Section>
-        <Title
-          heading="What I do"
-          subheading="Development"
-          align="center"
-          marginTop="1.2"
-        />
+        <div data-aos="fade-down" data-aos-duration="1000">
+          <Title
+            heading="What I do"
+            subheading="Development"
+            align="center"
+            marginTop="1.2"
+          />
+        </div>
         <Wrapper>
-          <Card>
+          <Card
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             <h3>Font End Development</h3>
             <p>
               I build front end interfaces for the web using HTML, CSS,
@@ -23,7 +30,11 @@ function Work() {
               depending on the problem I'm trying to solve.
             </p>
           </Card>
-          <Card>
+          <Card
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <h3>Back End Development</h3>
             <p>
               I have experience building backend APIs with user authentication

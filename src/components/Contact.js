@@ -4,23 +4,30 @@ import styled from "@emotion/styled"
 import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
+import "aos/dist/aos.css"
 
 function Contact() {
   return (
     <Container>
       <Section id="contact">
-        <Title
-          heading="Get in Touch!"
-          subheading="Contact Me"
-          align="center"
-          marginTop="1.2"
-        />
-        <p>
+        <div data-aos="fade-down" data-aos-duration="1000">
+          <Title
+            heading="Get in Touch!"
+            subheading="Contact Me"
+            align="center"
+            marginTop="1.2"
+          />
+        </div>
+        <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
           If you're interested in working with me, feel free to click the button
           below and send me an message! You can also just email me at
           ElierPorto@gmail.com; I look forward to our conversation.
         </p>
-        <ButtonContainer>
+        <ButtonContainer
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
           <Button
             href="mailto:elierporto@gmail.com"
             color={`${theme.colors.primary}`}

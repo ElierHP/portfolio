@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
@@ -8,6 +8,7 @@ import styled from "@emotion/styled"
 import theme from "../theme"
 import Footer from "./Footer"
 import Video from "../images/video.mp4"
+import AOS from "aos"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,6 +20,10 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <Page>

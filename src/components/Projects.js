@@ -5,6 +5,7 @@ import { AiFillGithub } from "react-icons/ai"
 import { MdTravelExplore } from "react-icons/md"
 import Container from "./Container"
 import Title from "./Title"
+import "aos/dist/aos.css"
 
 function Projects() {
   const data = [
@@ -19,6 +20,7 @@ function Projects() {
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
       key: 0,
+      delay: 100,
     },
     {
       title: "Sunshine Dental",
@@ -31,6 +33,7 @@ function Projects() {
       siteUrl: "https://sunshinedental.netlify.app/",
       gitHubUrl: "https://github.com/ElierHP/sunshinedental",
       key: 1,
+      delay: 200,
     },
     {
       title: "My Portfolio Site",
@@ -43,6 +46,7 @@ function Projects() {
       siteUrl: "https://elierhernandez.netlify.com/",
       gitHubUrl: "https://github.com/ElierHP/portfolio",
       key: 2,
+      delay: 300,
     },
   ]
   return (
@@ -56,7 +60,12 @@ function Projects() {
         />
         <Wrapper>
           {data.map(project => (
-            <Card key={project.key}>
+            <Card
+              key={project.key}
+              data-aos="slide-right"
+              data-aos-duration="1000"
+              data-aos-delay={project.delay}
+            >
               <CardSubtitle>Featured Project</CardSubtitle>
               <CardTitle>{project.title}</CardTitle>
               <p>{project.description}</p>
