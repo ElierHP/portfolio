@@ -23,7 +23,7 @@ const Link = styled.a`
   text-align: center;
   border-radius: 0.2rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: ${theme.transition.primary};
   &:hover {
     background-color: ${theme.colors.secondary};
   }

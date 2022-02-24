@@ -42,9 +42,10 @@ const Header = () => {
       {/* Navbar */}
       <Container
         css={css`
+          transition: ${theme.transition.primary};
           background-color: ${navColor
             ? `${theme.colors.primary}`
-            : "transparent"};
+            : "rgba(0, 0, 0, 0)"};
         `}
       >
         <NavBar>
@@ -65,17 +66,25 @@ const Header = () => {
 
       {/* Dropdown Menu */}
       <Menu open={toggle}>
-        <li onClick={closeMenu}>
-          <MenuLink href="#home">HOME</MenuLink>
+        <li>
+          <MenuLink href="#home" onClick={closeMenu}>
+            HOME
+          </MenuLink>
         </li>
-        <li onClick={closeMenu}>
-          <MenuLink href="#about">ABOUT</MenuLink>
+        <li>
+          <MenuLink href="#about" onClick={closeMenu}>
+            ABOUT
+          </MenuLink>
         </li>
-        <li onClick={closeMenu}>
-          <MenuLink href="#projects">PROJECTS</MenuLink>
+        <li>
+          <MenuLink href="#projects" onClick={closeMenu}>
+            PROJECTS
+          </MenuLink>
         </li>
-        <li onClick={closeMenu}>
-          <MenuLink href="#contact">CONTACT</MenuLink>
+        <li>
+          <MenuLink href="#contact" onClick={closeMenu}>
+            CONTACT
+          </MenuLink>
         </li>
         {/* Icons */}
         <IconContainer>
@@ -119,7 +128,7 @@ const Logo = styled.div`
 const LogoLink = styled(Link)`
   font-size: 2.5rem;
   letter-spacing: 3px;
-  transition: all 0.2s ease-in-out;
+  transition: ${theme.transition.primary};
   &:hover {
     color: ${theme.colors.secondary};
   }
@@ -129,7 +138,7 @@ const IconButton = styled.div`
   display: flex;
   color: ${theme.colors.light};
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: ${theme.transition.primary};
   &:hover {
     color: ${theme.colors.secondary};
   }
@@ -154,19 +163,20 @@ const Menu = styled.ul`
 
   transform: ${props => (props.open ? "translateY(0)" : "translateY(-100vh)")};
   opacity: ${props => (props.open ? "1" : "0")};
-  transition: all 0.5s ease-in-out;
+  transition: ${theme.transition.secondary};
 `
 
 const MenuLink = styled.a`
   font-size: ${theme.fontSizes.large}rem;
   font-weight: ${theme.fontWeights.body};
   letter-spacing: 5px;
-  border-bottom: 5px solid ${theme.colors.primaryDark};
-  padding: 0 1rem;
-  transition: all 0.3s ease-in-out;
+  border-bottom: 4px solid ${theme.colors.primaryDark};
+  padding: 0 0.01rem;
+  transition: ${theme.transition.primary};
   &:hover {
     color: ${theme.colors.secondary};
     border-bottom: 4px solid ${theme.colors.secondary};
+    padding: 0 1.5rem;
   }
   ${theme.mq()[3]} {
     font-size: ${theme.fontSizes.heading}rem;
@@ -184,7 +194,7 @@ const SocialIcon = styled.a`
   display: flex;
   color: ${theme.colors.light};
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: ${theme.transition.primary};
   &:hover {
     color: ${theme.colors.secondary};
   }

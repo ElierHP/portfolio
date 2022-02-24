@@ -36,6 +36,10 @@ const theme = {
     neutral: "#DDDDDD",
     body: "#404250",
   },
+  transition: {
+    primary: "all 0.3s ease-in-out",
+    secondary: "all 0.5s ease-in-out",
+  },
   breakpoints: [576, 768, 992, 1200],
   mq() {
     return this.breakpoints.map(bp => `@media (min-width: ${bp}px)`)
