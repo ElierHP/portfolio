@@ -138,6 +138,10 @@ const IconButton = styled.a`
   font-size: 3.2rem;
   color: ${theme.colors.primary};
   cursor: pointer;
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: ${theme.colors.secondary};
+  }
 `
 
 export default Projects

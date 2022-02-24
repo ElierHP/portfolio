@@ -69,6 +69,10 @@ const IconButton = styled.a`
   margin: auto;
   cursor: pointer;
   color: ${theme.colors.light};
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${theme.colors.secondary};
+  }
 `
 
 export default Hero

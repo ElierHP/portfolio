@@ -119,12 +119,20 @@ const Logo = styled.div`
 const LogoLink = styled(Link)`
   font-size: 2.5rem;
   letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${theme.colors.secondary};
+  }
 `
 
 const IconButton = styled.div`
   display: flex;
   color: ${theme.colors.light};
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: ${theme.colors.secondary};
+  }
 `
 
 // Dropdown Menu
@@ -150,15 +158,18 @@ const Menu = styled.ul`
 `
 
 const MenuLink = styled.a`
-  font-size: ${theme.fontSizes.heading}rem;
+  font-size: ${theme.fontSizes.large}rem;
   font-weight: ${theme.fontWeights.body};
   letter-spacing: 5px;
   border-bottom: 5px solid ${theme.colors.primaryDark};
   padding: 0 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    color: ${theme.colors.primaryLight};
-    border-bottom: 5px solid ${theme.colors.primaryLight};
+    color: ${theme.colors.secondary};
+    border-bottom: 4px solid ${theme.colors.secondary};
+  }
+  ${theme.mq()[3]} {
+    font-size: ${theme.fontSizes.heading}rem;
   }
 `
 
@@ -173,6 +184,10 @@ const SocialIcon = styled.a`
   display: flex;
   color: ${theme.colors.light};
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: ${theme.colors.secondary};
+  }
 `
 
 export default Header
