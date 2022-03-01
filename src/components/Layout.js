@@ -123,7 +123,7 @@ const DarkContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(18, 48, 69, 0.5);
 `
 
 const DesktopVideo = styled.video`
