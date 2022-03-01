@@ -36,8 +36,9 @@ const Header = () => {
       window.scrollY >= 96.84 ? setNavColor(true) : setNavColor(false)
     }
   }
-  window.addEventListener("scroll", changeBackground)
-
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeBackground)
+  }
   return (
     <>
       {/* Navbar */}
