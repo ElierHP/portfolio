@@ -14,7 +14,7 @@ const NotFoundPage = () => (
     <Typography>
       Press the Home button below to return to the main website.
     </Typography>
-    <IconButton to="http://localhost:8000/">
+    <IconButton to="/">
       <Button color={theme.colors.primary}>Home</Button>
     </IconButton>
   </Container>

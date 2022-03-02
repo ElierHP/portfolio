@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "@emotion/styled"
 import theme from "../theme"
 import { AiFillHtml5 } from "react-icons/ai"

@@ -52,17 +52,19 @@ function Projects() {
   return (
     <Section id="projects">
       <Container>
-        <Title
-          heading="Projects"
-          subheading="My Work"
-          align="center"
-          marginTop="1.2"
-        />
+        <div data-aos="fade-down" data-aos-duration="1000">
+          <Title
+            heading="Projects"
+            subheading="My Work"
+            align="center"
+            marginTop="1.2"
+          />
+        </div>
         <Wrapper>
           {data.map(project => (
             <Card
               key={project.key}
-              data-aos="slide-right"
+              data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay={project.delay}
             >
