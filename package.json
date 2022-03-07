@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "description": "Elier Hernandez, full stack web developer portfolio website.",
+  "description": "Elier Hernandez, Full Stack Web Developer located in Miami, FL.",
   "version": "0.1.0",
   "author": "Elier Hernandez",
   "dependencies": {
@@ -26,6 +26,7 @@
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "gatsby-plugin-netlify": "^4.1.0",
     "prettier": "^2.5.1"
   },
   "keywords": [
