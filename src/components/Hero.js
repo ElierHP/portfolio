@@ -47,7 +47,10 @@ const Section = styled.section`
 const Wrapper = styled.div`
   margin: auto;
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
+  ${theme.mq()[0]} {
+    padding-bottom: 3rem;
+  }
 `
 
 const Heading = styled.h1`
@@ -77,7 +80,7 @@ const Color = styled.span`
 
 const IconButton = styled.a`
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   font-size: 4rem;
   margin: auto;
   cursor: pointer;
@@ -85,6 +88,9 @@ const IconButton = styled.a`
   transition: all 0.2s ease-in-out;
   &:hover {
     color: ${theme.colors.secondary};
+  }
+  ${theme.mq()[0]} {
+    bottom: 2rem;
   }
 `
 
