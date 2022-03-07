@@ -14,7 +14,7 @@ This website was built with React and Gatsby, using Emotion JS for handling the 
 
 1. Download repository
    ```bash
-   git clone git@github.com:ElierHP/portfolio.git
+   git clone https://github.com/ElierHP/portfolio.git
    ```
 2. Install packages
    ```bash
