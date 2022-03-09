@@ -13,6 +13,7 @@ import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
 import "aos/dist/aos.css"
+import Resume from "../images/resume.pdf"
 
 function About() {
   return (
@@ -118,8 +119,8 @@ function About() {
             <Button color={theme.colors.primary} href="#projects">
               PROJECTS
             </Button>
-            <Button color={theme.colors.primaryDark} href="#contact">
-              CONTACT
+            <Button color={theme.colors.primaryDark} href={Resume}>
+              RESUME/CV
             </Button>
           </ButtonContainer>
         </Wrapper>
