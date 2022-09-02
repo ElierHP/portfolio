@@ -36,5 +36,6 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     "gatsby-plugin-netlify",
+    `gatsby-plugin-sass`,
   ],
 }

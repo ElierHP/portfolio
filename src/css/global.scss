@@ -1,0 +1,57 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $light;
+  font-family: Montserrat, sans-serif;
+  font-size: $font-medium;
+  letter-spacing: 0.5;
+  line-height: 1.5;
+  color: $body;
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: $dark;
+}
+
+h1 {
+  font-size: $font-mobile-heading;
+  @media (min-width: $xs) {
+    font-size: $font-large-heading;
+  }
+}
+
+h2 {
+  font-size: $font-large;
+  @media (min-width: $s) {
+    font-size: $font-heading;
+  }
+}
+
+h3 {
+  font-size: $font-medium;
+  @media (min-width: $xs) {
+    font-size: $font-large;
+  }
+}
+
+h4 {
+  font-size: $font-small;
+  color: $primary;
+  margin: 0;
+}
