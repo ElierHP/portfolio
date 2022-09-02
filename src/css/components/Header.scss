@@ -1,0 +1,116 @@
+@import "../variables";
+
+.header_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.header_logo {
+  font-weight: $font-bold;
+}
+
+.header_logo-link {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  transition: $transition-primary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.header_icon-btn {
+  display: flex;
+  color: $light;
+  cursor: pointer;
+  transition: $transition-primary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.header_menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $primaryDark;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_menu-link {
+  font-size: $font-large;
+  font-weight: $font-body;
+  letter-spacing: 5px;
+  border-bottom: 4px solid $primaryDark;
+  padding: 0 0.01rem;
+  transition: $transition-primary;
+  &:hover {
+    color: $secondary;
+    border-bottom: 4px solid $secondary;
+    padding: 0 1.5rem;
+  }
+  @media (min-width: $lg) {
+    font-size: $font-large-heading;
+  }
+}
+
+.header_icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 3rem;
+}
+
+.header_icon {
+  display: flex;
+  color: $light;
+  cursor: pointer;
+  transition: $primary;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+// Header menu animations
+.header_menu_slide-up {
+  transform: translateY(0);
+  opacity: 1;
+  transition: $transition-secondary;
+}
+
+.header_menu_slide-down {
+  transform: translateY(-100vh);
+  opacity: 0;
+  transition: $transition-secondary;
+}
+
+// Change navbar color when scrolling.
+.header_color-primary {
+  background-color: $primary;
+  transition: $transition-primary;
+}
+
+.header_color-transparent {
+  background-color: rgba(0, 0, 0, 0);
+  transition: $transition-primary;
+}

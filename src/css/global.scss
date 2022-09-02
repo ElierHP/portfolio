@@ -38,7 +38,7 @@ h1 {
 
 h2 {
   font-size: $font-large;
-  @media (min-width: $s) {
+  @media (min-width: $sm) {
     font-size: $font-heading;
   }
 }

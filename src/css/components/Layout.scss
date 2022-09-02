@@ -1,0 +1,23 @@
+.layout_page {
+  overflow: hidden;
+}
+
+.layout_desktop-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.layout_dark-container {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(18, 48, 69, 0.5);
+}
+
+.layout_main {
+  min-height: calc(100vh - 114.19px);
+}

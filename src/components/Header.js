@@ -2,12 +2,10 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { CgClose } from "react-icons/cg"
-import styled from "@emotion/styled"
-import theme from "../theme"
-import { css } from "@emotion/react"
 import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
+import "../css/components/Header.scss"
 import "aos/dist/aos.css"
 
 const Header = () => {
@@ -42,164 +40,91 @@ const Header = () => {
   return (
     <>
       {/* Navbar */}
-      <Container
-        css={css`
-          transition: ${theme.transition.primary};
-          background-color: ${navColor
-            ? `${theme.colors.primary}`
-            : "rgba(0, 0, 0, 0)"};
-        `}
+      <div
+        className={`header_container ${
+          // Nav color changes when scrolling past initial view port.
+          navColor ? "header_color-primary" : "header_color-transparent"
+        }`}
       >
-        <NavBar>
+        <nav className="header_navbar">
           {/* Logo */}
-          <Logo data-aos="fade-right" data-aos-duration="1000">
-            <LogoLink to="/">E.H.</LogoLink>
-          </Logo>
+          <div
+            className="header_logo"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <Link className="header_logo-link" to="/">
+              E.H.
+            </Link>
+          </div>
           {/* Menu Icon */}
-          <IconButton data-aos="fade-left" data-aos-duration="1000">
+          <div
+            className="header_icon-btn"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             {toggle ? (
               <CgClose size={45} onClick={closeMenu} />
             ) : (
               <HiMenuAlt3 size={45} onClick={openMenu} />
             )}
-          </IconButton>
-        </NavBar>
-      </Container>
+          </div>
+        </nav>
+      </div>
 
       {/* Dropdown Menu */}
-      <Menu open={toggle}>
+      <ul
+        className={`header_menu ${
+          toggle ? "header_menu_slide-up" : "header_menu_slide-down"
+        }`}
+        open={toggle}
+      >
         <li>
-          <MenuLink href="#home" onClick={closeMenu}>
+          <a className="header_menu-link" href="#home" onClick={closeMenu}>
             HOME
-          </MenuLink>
+          </a>
         </li>
         <li>
-          <MenuLink href="#about" onClick={closeMenu}>
+          <a className="header_menu-link" href="#about" onClick={closeMenu}>
             ABOUT
-          </MenuLink>
+          </a>
         </li>
         <li>
-          <MenuLink href="#projects" onClick={closeMenu}>
+          <a className="header_menu-link" href="#projects" onClick={closeMenu}>
             PROJECTS
-          </MenuLink>
+          </a>
         </li>
         <li>
-          <MenuLink href="#contact" onClick={closeMenu}>
+          <a className="header_menu-link" href="#contact" onClick={closeMenu}>
             CONTACT
-          </MenuLink>
+          </a>
         </li>
+
         {/* Icons */}
-        <IconContainer>
-          <SocialIcon href="https://github.com/ElierHP">
+        <div className="header_icons-container">
+          <a
+            className="header_icon"
+            href="https://github.com/ElierHP"
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiFillGithub size={45} />
-          </SocialIcon>
-          <SocialIcon href="https://www.linkedin.com/in/elier-hernandez-a16906161/">
+          </a>
+          <a
+            className="header_icon"
+            href="https://www.linkedin.com/in/elier-hernandez-a16906161/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiFillLinkedin size={45} />
-          </SocialIcon>
-          <SocialIcon href="mailto:elierporto@gmail.com">
+          </a>
+          <a className="header_icon" href="mailto:elierporto@gmail.com">
             <AiOutlineMail size={45} />
-          </SocialIcon>
-        </IconContainer>
-      </Menu>
+          </a>
+        </div>
+      </ul>
     </>
   )
 }
-
-// Styles
-const Container = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-`
-
-const NavBar = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  max-width: 1250px;
-  margin: auto;
-`
-
-const Logo = styled.div`
-  font-weight: ${theme.fontWeights.bold};
-`
-
-const LogoLink = styled(Link)`
-  font-size: 2.5rem;
-  letter-spacing: 3px;
-  transition: ${theme.transition.primary};
-  &:hover {
-    color: ${theme.colors.secondary};
-  }
-`
-
-const IconButton = styled.div`
-  display: flex;
-  color: ${theme.colors.light};
-  cursor: pointer;
-  transition: ${theme.transition.primary};
-  &:hover {
-    color: ${theme.colors.secondary};
-  }
-`
-
-// Dropdown Menu
-const Menu = styled.ul`
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: ${theme.colors.primaryDark};
-  text-align: center;
-  text-decoration: none;
-  list-style: none;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-
-  transform: ${props => (props.open ? "translateY(0)" : "translateY(-100vh)")};
-  opacity: ${props => (props.open ? "1" : "0")};
-  transition: ${theme.transition.secondary};
-`
-
-const MenuLink = styled.a`
-  font-size: ${theme.fontSizes.large}rem;
-  font-weight: ${theme.fontWeights.body};
-  letter-spacing: 5px;
-  border-bottom: 4px solid ${theme.colors.primaryDark};
-  padding: 0 0.01rem;
-  transition: ${theme.transition.primary};
-  &:hover {
-    color: ${theme.colors.secondary};
-    border-bottom: 4px solid ${theme.colors.secondary};
-    padding: 0 1.5rem;
-  }
-  ${theme.mq()[3]} {
-    font-size: ${theme.fontSizes.heading}rem;
-  }
-`
-
-const IconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 3rem;
-`
-
-const SocialIcon = styled.a`
-  display: flex;
-  color: ${theme.colors.light};
-  cursor: pointer;
-  transition: ${theme.transition.primary};
-  &:hover {
-    color: ${theme.colors.secondary};
-  }
-`
 
 export default Header
