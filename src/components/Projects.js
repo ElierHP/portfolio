@@ -1,11 +1,10 @@
 import React from "react"
-import theme from "../theme"
-import styled from "@emotion/styled"
 import { AiFillGithub } from "react-icons/ai"
 import { MdTravelExplore } from "react-icons/md"
 import Container from "./Container"
 import Title from "./Title"
 import "aos/dist/aos.css"
+import "../css/components/projects.scss"
 
 function Projects() {
   const data = [
@@ -50,7 +49,7 @@ function Projects() {
     },
   ]
   return (
-    <Section id="projects">
+    <section id="projects">
       <Container>
         <div data-aos="fade-down" data-aos-duration="1000">
           <Title
@@ -60,99 +59,37 @@ function Projects() {
             marginTop="1.2"
           />
         </div>
-        <Wrapper>
+        <div className="projects_wrapper">
           {data.map(project => (
-            <Card
+            <div
+              className="projects_card"
               key={project.key}
               data-aos="fade-right"
               data-aos-duration="1000"
               data-aos-delay={project.delay}
             >
-              <CardSubtitle>Featured Project</CardSubtitle>
-              <CardTitle>{project.title}</CardTitle>
+              <h4 className="projects_card-subtitle">Featured Project</h4>
+              <h3 className="projects_card-title">{project.title}</h3>
               <p>{project.description}</p>
               <p>{project.description2}</p>
-              <TechText>{project.technologies}</TechText>
-              <IconContainer>
-                <IconButton href={project.gitHubUrl}>
+              <p className="projects_card-technology">{project.technologies}</p>
+              <div className="projects_icon-container">
+                <a
+                  className="projects_card_icon-button"
+                  href={project.gitHubUrl}
+                >
                   <AiFillGithub />
-                </IconButton>
-                <IconButton href={project.siteUrl}>
+                </a>
+                <a className="projects_card_icon-button" href={project.siteUrl}>
                   <MdTravelExplore />
-                </IconButton>
-              </IconContainer>
-            </Card>
+                </a>
+              </div>
+            </div>
           ))}
-        </Wrapper>
+        </div>
       </Container>
-    </Section>
+    </section>
   )
 }
-
-//Styles
-
-const Section = styled.section`
-  background: ${theme.colors.neutral};
-  padding-top: ${theme.space[8]}rem;
-  padding-bottom: ${theme.space[8]}rem;
-`
-
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  margin-top: 4rem;
-  ${theme.mq()[1]} {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 8rem;
-  }
-  ${theme.mq()[3]} {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-`
-
-const Card = styled.div`
-  position: relative;
-  border-radius: 0.5rem;
-  background: ${theme.colors.light};
-  padding: 3rem 3rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  ${theme.mq()[1]} {
-    padding: 5.5rem 5rem;
-  }
-`
-
-const CardTitle = styled.h3`
-  margin-top: 0;
-`
-
-const CardSubtitle = styled.h4`
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-`
-
-const TechText = styled.p`
-  font-weight: ${theme.fontWeights.bold};
-  font-size: ${theme.fontSizes.small}rem;
-`
-
-const IconContainer = styled.div`
-  display: flex;
-  grid-gap: 1rem;
-  justify-content: right;
-  position: absolute;
-  right: 1.5rem;
-  bottom: 0.5rem;
-`
-
-const IconButton = styled.a`
-  font-size: 3.2rem;
-  color: ${theme.colors.primary};
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-  &:hover {
-    color: ${theme.colors.secondary};
-  }
-`
 
 export default Projects

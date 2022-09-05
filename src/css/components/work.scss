@@ -1,0 +1,26 @@
+@import "../variables";
+
+.work_section {
+  padding-top: 6rem;
+  padding-bottom: 16rem;
+  @media (min-width: $md) {
+    padding-top: 8rem;
+  }
+}
+
+.work_card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  margin-top: 4rem;
+  @media (min-width: $sm) {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 8rem;
+  }
+}
+
+.work_card {
+  padding: 4rem;
+  border: 3px solid $neutral;
+  border-radius: 0.2rem;
+}

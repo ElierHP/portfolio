@@ -1,5 +1,14 @@
 @import "./variables";
 
+.container {
+  max-width: 1250px;
+  padding: 0 2rem;
+  margin: auto;
+  @media (min-width: $xs) {
+    padding: 0 3rem;
+  }
+}
+
 // Background color classes
 .bg-color_primary {
   background-color: $primary;
@@ -9,4 +18,18 @@
 }
 .bg-color_primary-dark {
   background-color: $primaryDark;
+}
+
+// Margins
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+
+.ml-05 {
+  margin-left: 0.5rem;
+}
+
+// Alignments
+.center {
+  text-align: center;
 }

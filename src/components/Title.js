@@ -1,36 +1,24 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { css } from "@emotion/react"
 
 function Title({ heading, subheading, marginTop, align }) {
   return (
     <>
-      <SubHeading
-        css={css`
-          text-align: ${align};
-        `}
+      <h4
+        className="ml-05"
+        style={{
+          textAlign: align,
+        }}
       >
         {subheading}
-      </SubHeading>
-      <Heading
-        css={css`
-          text-align: ${align};
-          margin-top: ${marginTop}rem;
-        `}
+      </h4>
+      <h2
+        className="mt-1-5"
+        style={{ textAlign: align, marginTop: `${marginTop}rem` }}
       >
         {heading}
-      </Heading>
+      </h2>
     </>
   )
 }
-
-//Styles
-const Heading = styled.h2`
-  margin-top: 1.5rem;
-`
-
-const SubHeading = styled.h4`
-  margin-left: 0.5rem;
-`
 
 export default Title
