@@ -124,10 +124,10 @@ function About() {
             data-aos-duration="1000"
             data-aos-delay="250"
           >
-            <Button className="color_primary" href="#projects">
+            <Button color="bg-color_primary" href="#projects">
               PROJECTS
             </Button>
-            <Button className="color_primary-dark" href={Resume}>
+            <Button color="bg-color_primary-dark" href={Resume}>
               RESUME/CV
             </Button>
           </div>

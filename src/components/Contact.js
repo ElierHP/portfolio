@@ -28,7 +28,7 @@ function Contact() {
           data-aos-duration="1000"
           data-aos-delay="200"
         >
-          <Button href="mailto:elierporto@gmail.com" className="color_primary">
+          <Button href="mailto:elierporto@gmail.com" color="bg-color_primary">
             SEND MESSAGE
           </Button>
         </div>

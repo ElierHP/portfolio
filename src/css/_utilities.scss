@@ -1,0 +1,12 @@
+@import "./variables";
+
+// Background color classes
+.bg-color_primary {
+  background-color: $primary;
+}
+.bg-color_primary-light {
+  background-color: $primaryLight;
+}
+.bg-color_primary-dark {
+  background-color: $primaryDark;
+}
