@@ -30,6 +30,4 @@ This website was built with React and Gatsby, using Emotion JS for handling the 
 
 #### :mailbox: Reach out to me!
 
-- :clipboard: [My Resume/CV]()
 - :email: elierporto@gmail.com
-- :page_facing_up: [elierhernandez.netlify.app](https://www.elierhernandez.netlify.app)
