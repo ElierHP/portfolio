@@ -1,0 +1,11 @@
+.error_page_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: -2rem;
+  max-width: 1250px;
+  padding: 0 2rem;
+  margin: auto;
+}
