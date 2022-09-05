@@ -1,0 +1,19 @@
+@import "../variables";
+
+#contact {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
+}
+
+.contact_button-container {
+  display: block;
+  margin: auto;
+  width: 70%;
+  margin-top: 4rem;
+  @media (min-width: $xs) {
+    max-width: 300px;
+  }
+}

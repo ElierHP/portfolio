@@ -7,7 +7,7 @@ import Video from "../images/video.mp4"
 import AOS from "aos"
 import "normalize.css"
 import "../css/global.scss"
-import "../css/components/Layout.scss"
+import "../css/components/layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

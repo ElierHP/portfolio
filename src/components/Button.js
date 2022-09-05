@@ -1,32 +1,19 @@
 import React from "react"
-import styled from "@emotion/styled"
-import theme from "../theme"
 import { css } from "@emotion/react"
+import "../css/components/button.scss"
 
 const Button = ({ color, children, href }) => {
   return (
-    <Link
+    <a
+      className="button_link"
       href={href}
       css={css`
         background-color: ${color};
       `}
     >
       {children}
-    </Link>
+    </a>
   )
 }
-
-//Styles
-const Link = styled.a`
-  display: inline-block;
-  padding: 1rem 4rem;
-  text-align: center;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  transition: ${theme.transition.primary};
-  &:hover {
-    background-color: ${theme.colors.secondary};
-  }
-`
 
 export default Button

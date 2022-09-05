@@ -1,0 +1,13 @@
+@import "../variables";
+
+.button_link {
+  display: inline-block;
+  padding: 1rem 4rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: $transition-primary;
+  &:hover {
+    background-color: $secondary;
+  }
+}

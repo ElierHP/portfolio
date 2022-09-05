@@ -5,7 +5,7 @@ import { CgClose } from "react-icons/cg"
 import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
-import "../css/components/Header.scss"
+import "../css/components/header.scss"
 import "aos/dist/aos.css"
 
 const Header = () => {

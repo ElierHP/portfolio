@@ -1,0 +1,60 @@
+@import "../variables";
+
+#about {
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  grid-gap: 2rem;
+  position: relative;
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
+}
+
+.about_wrapper {
+  width: 90%;
+}
+
+.about_skills {
+  margin-top: 5rem;
+}
+
+.about_icon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  @media (min-width: $sm) {
+    grid-gap: 0;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: left;
+  }
+}
+
+.about_icon-title {
+  margin: 0;
+  font-size: $font-small;
+}
+
+.about_icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 5rem;
+  color: $body;
+}
+
+.about_button-container {
+  padding-top: 2rem;
+  display: flex;
+  grid-gap: 1rem;
+  flex-direction: column;
+  margin-top: 3rem;
+  @media (min-width: $xs) {
+    flex-direction: row;
+    max-width: 300px;
+  }
+}
