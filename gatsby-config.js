@@ -3,7 +3,7 @@ module.exports = {
     title: `Elier H.`,
     description: `Full stack development portfolio website using Gatsby JS.`,
     author: `Elier Hernandez`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://elierhernandez.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,7 +34,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-emotion`,
     "gatsby-plugin-netlify",
     `gatsby-plugin-sass`,
   ],

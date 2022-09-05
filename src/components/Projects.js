@@ -73,7 +73,7 @@ function Projects() {
               <p>{project.description}</p>
               <p>{project.description2}</p>
               <p className="projects_card-technology">{project.technologies}</p>
-              <div className="projects_icon-container">
+              <div className="projects_card_icon-container">
                 <a
                   className="projects_card_icon-button"
                   href={project.gitHubUrl}
