@@ -12,7 +12,7 @@ function Projects() {
       title: "Pencils and Inks",
       subtitle: "Featured Project",
       description:
-        "Pencils and Inks is an e commerce website that I developed from scratch using React & Next js for the client side and Ruby on Rails for the server API.",
+        "Pencils and Inks is an e-commerce website that I developed from scratch using React & Next js for the client side and Ruby on Rails for the server API.",
       description2:
         "The website includes various features such as; products, users, filter settings, a review system with ratings, a shopping cart, and an admin panel for CRUD operations.",
       technologies: "Ruby on Rails, React, Postgresql",
