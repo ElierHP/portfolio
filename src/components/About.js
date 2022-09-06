@@ -3,7 +3,7 @@ import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
 import "aos/dist/aos.css"
-import Resume from "../images/resume.pdf"
+import Resume from "../images/Elier_H_Portfolio.pdf"
 import "../css/components/about.scss"
 import Skills from "./Skills"
 
@@ -44,9 +44,14 @@ function About() {
             <Button color="bg-color_primary" href="#projects">
               PROJECTS
             </Button>
-            <Button color="bg-color_primary-dark" href={Resume}>
+            <a
+              className={`button_link bg-color_primary-dark`}
+              href={Resume}
+              target="_blank"
+              rel="noreferrer"
+            >
               RESUME/CV
-            </Button>
+            </a>
           </div>
         </div>
       </section>

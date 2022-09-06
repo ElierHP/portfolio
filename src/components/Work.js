@@ -40,7 +40,7 @@ function Work() {
             <p>
               I have experience building backend APIs with user authentication
               and authorization. I've created my own API for multiple projects
-              of mine using tools such as Node and Express.
+              of mine using tools such as Node, Express and Ruby on Rails.
             </p>
           </div>
         </div>
