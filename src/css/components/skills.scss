@@ -1,0 +1,31 @@
+@import "../variables";
+@import "../utilities";
+
+.skills_container {
+  margin-top: 5rem;
+}
+
+.skills_icon-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  @media (min-width: $sm) {
+    grid-gap: 0;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: left;
+  }
+}
+
+.skills_icon-title {
+  margin: 0;
+  font-size: $font-small;
+}
+
+.skills_icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 5rem;
+  color: $body;
+}

@@ -1,27 +1,23 @@
 import React from "react"
-import { AiFillHtml5 } from "react-icons/ai"
-import { DiCss3 } from "react-icons/di"
-import { IoLogoJavascript } from "react-icons/io"
-import { FaReact } from "react-icons/fa"
-import { IoLogoNodejs } from "react-icons/io"
-import { RiGatsbyFill } from "react-icons/ri"
-import { SiMaterialui } from "react-icons/si"
-import { SiMongodb } from "react-icons/si"
 import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
 import "aos/dist/aos.css"
 import Resume from "../images/resume.pdf"
 import "../css/components/about.scss"
+import Skills from "./Skills"
 
 function About() {
   return (
     <Container>
       <section id="about">
         <div className="about_wrapper">
+          {/* title */}
           <div data-aos="fade-right" data-aos-duration="1000">
             <Title heading="About Me" subheading="Who am I?" />
           </div>
+
+          {/* Descripion */}
           <p data-aos="fade-down" data-aos-duration="1000">
             Hello! My name is Elier and I enjoy creating things that live on the
             internet. My interest in the web started back in 2019 as a designer,
@@ -34,90 +30,11 @@ function About() {
             advertising agency, a video game studio, and the opportunity of
             giving multiple business a presence on the web.
           </p>
-          <div className="about_skills">
-            <h3
-              data-aos="fade-down"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              Skills
-            </h3>
-            {/* Icons */}
-            <div className="about_icon-container">
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
-                <p className="about_icon-title">html5</p>
-                <AiFillHtml5 />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="250"
-              >
-                <p className="about_icon-title">css3</p>
-                <DiCss3 />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="300"
-              >
-                <p className="about_icon-title">js es6+</p>
-                <IoLogoJavascript />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="350"
-              >
-                <p className="about_icon-title">react</p>
-                <FaReact />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="400"
-              >
-                <p className="about_icon-title">node</p>
-                <IoLogoNodejs />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="450"
-              >
-                <p className="about_icon-title">gatsby</p>
-                <RiGatsbyFill />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="500"
-              >
-                <p className="about_icon-title">mui</p>
-                <SiMaterialui />
-              </div>
-              <div
-                className="about_icon-button"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="550"
-              >
-                <p className="about_icon-title">mongo</p>
-                <SiMongodb />
-              </div>
-            </div>
-          </div>
+
+          {/* Skills */}
+          <Skills />
+
+          {/* Buttons */}
           <div
             className="about_button-container"
             data-aos="fade-left"
