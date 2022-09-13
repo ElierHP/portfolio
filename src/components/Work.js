@@ -23,7 +23,7 @@ function Work() {
             data-aos-duration="1000"
             data-aos-delay="100"
           >
-            <h3>Font End Development</h3>
+            <h3>Front End Development</h3>
             <p>
               I build front end interfaces for the web using HTML, CSS,
               Javascript and React. I also use a variety of libraries and tools

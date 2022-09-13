@@ -11,6 +11,7 @@ import {
   SiMongodb,
   SiRubyonrails,
   SiPostgresql,
+  SiTypescript,
 } from "react-icons/si"
 import "aos/dist/aos.css"
 import "../css/components/skills.scss"
@@ -22,7 +23,7 @@ export default function Skills() {
         Skills
       </h3>
 
-      {/* Frontend Icons */}
+      {/* First Row Icons */}
       <div className="skills_icon-container">
         <div
           className="skills_icon-button"
@@ -77,7 +78,7 @@ export default function Skills() {
           data-aos-delay="450"
         >
           <p className="skills_icon-title">next.js</p>
-          <SiNextdotjs />
+          <SiNextdotjs size={45} />
         </div>
         <div
           className="skills_icon-button"
@@ -99,7 +100,7 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Backend Icons */}
+      {/* Second Row Icons */}
       <div className="skills_icon-container mt-1-5">
         <div
           className="skills_icon-button"
@@ -116,6 +117,15 @@ export default function Skills() {
           data-aos-duration="1000"
           data-aos-delay="250"
         >
+          <p className="skills_icon-title">typescript</p>
+          <SiTypescript size={40} />
+        </div>
+        <div
+          className="skills_icon-button"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
           <p className="skills_icon-title">ruby</p>
           <DiRubyRough />
         </div>
@@ -123,7 +133,7 @@ export default function Skills() {
           className="skills_icon-button"
           data-aos="fade-left"
           data-aos-duration="1000"
-          data-aos-delay="300"
+          data-aos-delay="350"
         >
           <p className="skills_icon-title">rails</p>
           <SiRubyonrails />
@@ -133,7 +143,7 @@ export default function Skills() {
           className="skills_icon-button"
           data-aos="fade-left"
           data-aos-duration="1000"
-          data-aos-delay="350"
+          data-aos-delay="400"
         >
           <p className="skills_icon-title">mongodb</p>
           <SiMongodb />
@@ -142,7 +152,7 @@ export default function Skills() {
           className="skills_icon-button"
           data-aos="fade-left"
           data-aos-duration="1000"
-          data-aos-delay="400"
+          data-aos-delay="450"
         >
           <p className="skills_icon-title">postgresql</p>
           <SiPostgresql />

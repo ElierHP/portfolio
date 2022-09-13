@@ -12,7 +12,7 @@ function Projects() {
       title: "Pencils and Inks",
       subtitle: "Featured Project",
       description:
-        "Pencils and Inks is an e-commerce website that I developed from scratch using React & Next js for the client side and Ruby on Rails for the server API.",
+        "Pencils and Inks is an e-commerce website that was developed from scratch using React & Next js for the client side and Ruby on Rails for the server API.",
       description2:
         "The website includes various features such as; products, users, filter settings, a review system with ratings, a shopping cart, and an admin panel for CRUD operations.",
       technologies: "Ruby on Rails, React, Postgresql",
@@ -24,9 +24,9 @@ function Projects() {
       title: "Webmarks",
       subtitle: "Featured Project",
       description:
-        "Webmarks is an online file system that allows users to store folders and urls on the web. The Front end for this application was built using React and Material UI.",
+        "Webmarks is an online file system that allows users to store folders and urls on the web. The front end for this application was built using React and Material UI.",
       description2:
-        "I built the Back End API using Node with Express and handled the user authentication with Passport. The project is currently live on the web and can be viewed below.",
+        "The back end API was built using Node with Express, and the user authentication was handled with Passport. The project is currently live on the web and can be viewed below.",
       technologies: "React, MUI, Express, Mongodb",
       siteUrl: "https://webmarks.netlify.com",
       gitHubUrl: "https://github.com/ElierHP/webmarks",
@@ -39,7 +39,7 @@ function Projects() {
       description:
         "My portfolio was built to showcase projects and information that you might want to know about me. It includes a download link to my CV, as well as a contact link connected to my email.",
       description2:
-        "This website was built with React and Gatsby, using Emotion JS for handling the CSS. The codebase can be viewed by clicking on the Github icon below.",
+        "This website was built with React and Gatsby, using Sass for handling the CSS. The codebase can be viewed by clicking on the Github icon below.",
       technologies: "React, Gatsby, Emotion Js",
       siteUrl: "https://elierhernandez.netlify.com/",
       gitHubUrl: "https://github.com/ElierHP/portfolio",
@@ -49,9 +49,9 @@ function Projects() {
       title: "Sunshine Dental",
       subtitle: "Featured Project",
       description:
-        "Sunshine dental is a dentistry located in Valencia Shores Blvd. They do teeth cleanings, fillings & crowns, root canals, invisilign and more. This was one of my first projects.",
+        "Sunshine dental is a dentistry located in Valencia Shores Blvd. They do teeth cleanings, fillings & crowns, root canals, invisilign and more.",
       description2:
-        "I made this website using React and Gatsby with Styled Components for the CSS. I used Formik to create the contact form and it is hosted with Netlify.",
+        "This website was built using React and Gatsby with Styled Components for the CSS. Formik was used to handle the contact form and it is hosted with Netlify.",
       technologies: "React, Gatsby, Formik, Netlify",
       siteUrl: "https://sunshinedental.netlify.app/",
       gitHubUrl: "https://github.com/ElierHP/sunshinedental",
@@ -62,9 +62,9 @@ function Projects() {
       title: "Skyline M. Marketing",
       subtitle: "Client Project",
       description:
-        "Skyline is an advertisement agency located in New York. I worked with them doing various web projects including their main website.After communicating with them on the requirements of the website.",
+        "Skyline is an advertisement agency located in New York. I worked with them on various projects for multiple clients, including their own main website.",
       description2:
-        "I designed it for them using Figma. Once it was approved, I then programmed it using React and Gatsby as my tech choices",
+        "The website was designed in Figma, and built using React and Gatsby. After the creation of the website, the client experienced a 100%+ increase in leads from their marketing campaigns. It was a huge success.",
       technologies: "React, Gatsby, Formik, Netlify",
       siteUrl: "https://skyline-mediamarketing.com/",
       gitHubUrl: "private",

@@ -19,7 +19,7 @@ function Contact() {
         </div>
         <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
           If you're interested in working with me, feel free to click the button
-          below and send me an message! You can also just email me at
+          below and send me a message! You can also just email me at
           ElierPorto@gmail.com; I look forward to our conversation.
         </p>
         <div
