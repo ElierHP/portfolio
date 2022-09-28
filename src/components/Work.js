@@ -39,8 +39,8 @@ function Work() {
             <h3>Back End Development</h3>
             <p>
               I have experience building backend APIs with user authentication
-              and authorization. I've created my own API for multiple projects
-              of mine using tools such as Node, Express and Ruby on Rails.
+              and authorization. I use tools such as Node, Express and Ruby on
+              Rails.
             </p>
           </div>
         </div>
