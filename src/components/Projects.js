@@ -64,7 +64,7 @@ function Projects() {
       description:
         "Skyline is an advertisement agency located in New York. I worked with them on various projects for multiple clients, including their own main website.",
       description2:
-        "The website was designed in Figma, and built using React and Gatsby. After the creation of the website, the client experienced a 100%+ increase in leads from their marketing campaigns. It was a huge success.",
+        "The website was built using React and Gatsby. After the creation of the website, the client experienced a 100%+ increase in leads from their marketing campaigns. It was a huge success.",
       technologies: "React, Gatsby, Formik, Netlify",
       siteUrl: "https://skyline-mediamarketing.com/",
       gitHubUrl: "private",
