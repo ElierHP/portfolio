@@ -21,8 +21,8 @@ function About() {
           <p data-aos="fade-down" data-aos-duration="1000">
             My name is Elier Hernandez and I am a Full Stack Web Developer
             currently located in Miami, Florida. I have over 2 years of
-            experience working as a developer and familiarity with a wide range
-            of technologies. I love to learn and am always willing to expand my
+            experience as a developer and familiarity with a wide range of
+            technologies. I love to learn and am always willing to expand my
             knowledge.
           </p>
           <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
