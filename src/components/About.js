@@ -3,7 +3,7 @@ import Button from "./Button"
 import Container from "./Container"
 import Title from "./Title"
 import "aos/dist/aos.css"
-import Resume from "../images/Elier-Hernandez-Resume.pdf"
+import Resume from "../images/resume.pdf"
 import "../css/components/about.scss"
 import Skills from "./Skills"
 
@@ -20,10 +20,10 @@ function About() {
           {/* Descripion */}
           <p data-aos="fade-down" data-aos-duration="1000">
             My name is Elier Hernandez and I am a Full Stack Web Developer
-            currently located in Miami, Florida. I have over 2 years of
-            experience as a developer and familiarity with a wide range of
-            technologies. I love to learn and am always willing to expand my
-            knowledge.
+            currently located in Miami, Florida. Knowledgeable in testing,
+            frameworks, debugging, agile principles and TDD. Proficient in an
+            assortment of technologies, including Javascript, React, Nextjs,
+            Sass, Ruby, Ruby on Rails and Postgresql.
           </p>
           <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
             Highly team oriented, I believe good communication and teamwork
