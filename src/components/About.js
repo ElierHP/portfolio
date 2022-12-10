@@ -24,9 +24,9 @@ function About() {
             started creating user interfaces and experiences for the web.
           </p>
           <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-            I learned Web Development in order to bring my designs to life, and
-            fell in love with it. Now I dedicate myself full time to web
-            development, it's one of my great passions.
+            I learned development in order to bring my designs to life, and fell
+            in love with it. Now I dedicate myself full time to web development,
+            it's one of my great passions.
           </p>
 
           {/* Skills */}
