@@ -19,17 +19,14 @@ function About() {
 
           {/* Descripion */}
           <p data-aos="fade-down" data-aos-duration="1000">
-            My name is Elier Hernandez and I am a Full Stack Web Developer
-            currently located in Miami, Florida. Knowledgeable in testing,
-            frameworks, debugging, agile principles and TDD. Proficient in an
-            assortment of technologies, including Javascript, React, Nextjs,
-            Sass, Ruby, Ruby on Rails and Postgresql.
+            Full Stack Web Developer currently located in Miami, Florida. My
+            interest in the web started back in 2018 as a designer when I
+            started creating user interfaces and experiences for the web.
           </p>
           <p data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-            Highly team oriented, I believe good communication and teamwork
-            yield the best results. Strongly dedicated to producing high quality
-            products for clients and end-users. You can download my resume on
-            the link below.
+            I learned Web Development in order to bring my designs to life, and
+            fell in love with it. Now I dedicate myself full time to web
+            development, it's one of my great passions.
           </p>
 
           {/* Skills */}
