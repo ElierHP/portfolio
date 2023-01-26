@@ -41,7 +41,7 @@ function Projects() {
       description2:
         "This website was built with React and Gatsby, using Sass for handling the CSS. The codebase can be viewed by clicking on the Github icon below.",
       technologies: "React, Gatsby, Emotion Js",
-      siteUrl: "https://elierhernandez.netlify.com/",
+      siteUrl: "private",
       gitHubUrl: "https://github.com/ElierHP/portfolio",
       delay: 300,
     },
@@ -60,7 +60,7 @@ function Projects() {
     },
     {
       title: "Skyline M. Marketing",
-      subtitle: "Client Project",
+      subtitle: "Featured Project",
       description:
         "Skyline is an advertisement agency located in New York. I worked with them on various projects for multiple clients, including their own main website.",
       description2:
@@ -115,14 +115,16 @@ function Projects() {
                     <AiFillGithub />
                   </a>
                 )}
-                <a
-                  className="projects_card_icon-button"
-                  href={project.siteUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <MdTravelExplore />
-                </a>
+                {project.siteUrl !== "private" && (
+                  <a
+                    className="projects_card_icon-button"
+                    href={project.siteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <MdTravelExplore />
+                  </a>
+                )}
               </div>
             </div>
           ))}
